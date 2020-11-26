@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zsy.dao.ProductDao">
+    <!--推荐图书-->
+    <select id="limit" resultType="product">
+        select * from product LIMIT #{start},#{end}
+    </select>
+
+    <!--热卖榜-->
+    <select id="limit2" resultType="product">
+        SELECT * FROM product order by sellNum desc limit 5
+    </select>
+    
+    <select id="novel" resultType="product">
+        select * from product where productCategoryId = #{id};
+    </select>
+    
+    <select id="good" resultType="product">
+        select * from product where id = #{id};
+    </select>
+</mapper>

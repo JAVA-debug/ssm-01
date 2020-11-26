@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zsy.dao.CommentDao">
+    <select id="OneComment" resultType="com.zsy.vo.AccountComment">
+        select a.username,c.* from account a left join comment c on a.id = c.userId where productId = #{bookid}
+    </select>
+</mapper>
