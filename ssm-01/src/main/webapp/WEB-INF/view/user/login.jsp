@@ -40,7 +40,7 @@
                     <dd><input type="submit" value="登  录" class="submit"/> <a href="" class="forget">忘记密码?</a></dd>
                 </dl>
                 <div style="color: red">${error}</div>
-                ${test}
+
             </form>
             <dl>
                 <dt>&nbsp;</dt>

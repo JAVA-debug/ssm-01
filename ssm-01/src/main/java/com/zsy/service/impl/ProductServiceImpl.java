@@ -35,5 +35,10 @@ public class ProductServiceImpl implements IProductService {
         return productDao.good(id);
     }
 
+    @Override
+    public Integer updatePro(Product product) {
+        return productDao.updatePro(product);
+    }
+
 
 }

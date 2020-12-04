@@ -21,4 +21,8 @@
     <select id="good" resultType="product">
         select * from product where id = #{id};
     </select>
+
+    <update id="updatePro" parameterType="product">
+        update product set stock = #{stock},sellNum = #{sellNum} where id = #{id}
+    </update>
 </mapper>

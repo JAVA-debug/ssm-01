@@ -2,6 +2,7 @@ package com.zsy.controller;
 
 import com.zsy.domain.Account;
 import com.zsy.service.IAccountService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -136,4 +137,62 @@ public class AccountController {
         } else
             return "user/login";
     }
+
+    @RequestMapping("/info")
+    public String memberInfo(HttpServletRequest request,Model model){
+        Account account = (Account) request.getSession().getAttribute("account");
+        Integer userId = account.getId();
+        Account accountServiceById = accountService.findById(userId);
+        model.addAttribute("info",accountServiceById);
+        return "user/member_info";
+    }
+
+    @RequestMapping("/updateAcc")
+    public String updateAcc(HttpServletRequest request){
+        Account account1 = (Account) request.getSession().getAttribute("account");
+        Integer userId = account1.getId();
+        String trueName = request.getParameter("trueName");
+        Integer sex = Integer.parseInt(request.getParameter("sex"));
+        Integer res = accountService.updateAcc(userId,trueName,sex);
+        if (res == 1){
+            return "redirect:/info";
+        }else
+            return "/";
+    }
+
+    @RequestMapping("/ToUpdatePwd")
+    public String ToUpdatePwd(){
+        return "user/password_eidt";
+    }
+
+    @RequestMapping("/updatePwd")
+    public String updatePwd(String laterPwd,String newPwd,HttpServletRequest request,Model model){
+        Account account = (Account) request.getSession().getAttribute("account");
+        String password = account.getPassword();
+        if (!password .equals(laterPwd)){
+            model.addAttribute("error","不是原密码");
+            return "forward:/ToUpdatePwd";
+        }
+        Integer res = accountService.updatePwd(newPwd,account.getId());
+        if (res == 1) {
+            model.addAttribute("error","修改密码成功");
+            return "redirect:/";
+        }else {
+            return "user/error";
+        }
+    }
+
+
+
+//    @RequestMapping("/updateAcc")
+//    public String updateAcc(Account account,HttpServletRequest request){
+//        Account account1 = (Account) request.getSession().getAttribute("account");
+//        account.setId(account1.getId());
+//        Integer res = accountService.updateAcc(account);
+//        if (res == 1){
+//            return "redirect:/member_info";
+//        }else {
+//            return "user/index1";
+//        }
+//    }
 }

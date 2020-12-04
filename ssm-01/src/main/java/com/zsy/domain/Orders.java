@@ -1,6 +1,8 @@
 package com.zsy.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Orders {
     private Integer id;
@@ -12,6 +14,16 @@ public class Orders {
     private Integer status;
     private String remark;
     private Date createTime;
+
+    private List<OrderItem> orderItems = new ArrayList<OrderItem>();
+
+    public List<OrderItem> getOrderItems() {
+        return orderItems;
+    }
+
+    public void setOrderItems(List<OrderItem> orderItems) {
+        this.orderItems = orderItems;
+    }
 
     public Integer getId() {
         return id;

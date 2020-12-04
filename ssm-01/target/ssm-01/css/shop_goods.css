@@ -11,7 +11,7 @@
 .shop_goods_show_right ul li{padding:0px 0; height:40px; line-height: 40px;}
 .shop_goods_show_right ul li label{width:100px; padding-right: 10px; text-align: right; float:left; height:40px; line-height:40px;}
 .shop_goods_show_right ul li span strong{font-weight:bold; font-size:18px; color:#FF3311; margin-right: 5px;}
-.shop_goods_show_right ul li input.good_nums{width:20px; padding:0 5px; height:20px; line-height:20px;}
+.shop_goods_show_right ul li input.good_nums{width:40px; text-align: center; height:20px; line-height:20px;}
 .shop_goods_show_right ul li a.goods_sub{float:left; overflow: hidden;  width:140px; height:40px; text-indent: 100em; margin-right: 10px; background:url('../images/public.png') no-repeat -100px top;}
 .shop_goods_show_right ul li a.goods_sub_gou{background-position:-250px top;}
 .shop_goods_show_right ul li.goods_num span a{display: inline-block; background:url('../images/public.png') left -60px; width:13px; height:13px; margin:0 5px; position: relative; top:2px; cursor: pointer;}

@@ -38,7 +38,6 @@ public class GoodDetailController {
     @ResponseBody
     public List<AccountComment> comment(@RequestParam("bookid") Integer id){
         List<AccountComment> comments = commentService.OneComment(id);
-        System.out.println(comments);
         return comments;
     }
 

@@ -24,6 +24,7 @@
             <c:if test="${empty account}">
                 <p>您好，欢迎来到<b><a href="/">ShopCZ商城</a></b>[<a href="${pageContext.request.contextPath}/login">登录</a>][<a
                         href="${pageContext.request.contextPath}/regist">注册</a>]</p>
+
             </c:if>
         </div>
         <!-- Header TopNav Left End -->
@@ -34,7 +35,7 @@
 
                 <li>
                     <div class="topNav_menu">
-                        <a href="${pageContext.request.contextPath}/shop" class="topNavHover">我的商城<i></i></a>
+                        <a href="${pageContext.request.contextPath}/order?userId=${account.id}" class="topNavHover">我的商城<i></i></a>
                         <div class="topNav_menu_bd" style="display:none;">
                             <ul>
                                 <li><a title="已买到的商品" target="_top" href="#">已买到的商品</a></li>
@@ -45,10 +46,13 @@
                 </li>
                 <li>
                     <div class="topNav_menu">
-                        <a href="#" class="topNavHover">购物车<b>0</b>种商品<i></i></a>
-                        <div class="topNav_menu_bd" style="display:none;">
-                            <p>还没有商品，赶快去挑选！</p>
-                        </div>
+                        <c:if test="${!empty account}">
+                            <a href="toCart" class="topNavHover" id="total"><i></i></a>
+                        </c:if>
+                        <c:if test="${empty account}">
+                            <a href="" class="topNavHover" id="total">购物车</a>
+                        </c:if>
+
                     </div>
                 </li>
 
@@ -71,4 +75,19 @@
     <div class="clear"></div>
 </div>
 </body>
+<script>
+    $(document).ready(
+        $.ajax({
+            url:'total',
+            dataType:'json',
+            success:function (data) {
+                if (data.code == 4){
+                    $("#total").html(data.msg)
+                }else {
+                    $("#total").html("购物车"+data.msg+"种商品")
+                }
+            }
+        })
+    )
+</script>
 </html>

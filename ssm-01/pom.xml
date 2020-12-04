@@ -105,6 +105,13 @@
 <!--      <artifactId>jackson-annotations</artifactId>-->
 <!--      <version>2.3.3</version>-->
 <!--    </dependency>-->
+
+<!--    jsonObject-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.28</version>
+    </dependency>
   </dependencies>
 
   <build>

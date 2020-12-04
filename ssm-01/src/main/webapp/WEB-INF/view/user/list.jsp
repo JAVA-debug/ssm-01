@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/shop_common.css" type="text/css" />
 	<link rel="stylesheet" href="css/shop_header.css" type="text/css" />
     <link rel="stylesheet" href="css/shop_list.css" type="text/css" />
-    <script type="text/javascript" src="js/jquery.js" ></script>
+	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/topNav.js" ></script>
     <script type="text/javascript" src="js/shop_list.js" ></script>
 </head>

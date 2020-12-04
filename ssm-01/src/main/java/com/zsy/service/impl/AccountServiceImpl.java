@@ -38,4 +38,26 @@ public class AccountServiceImpl implements IAccountService {
         account.setStatus(1);
         return accountDao.doReg(account);
     }
+
+    @Override
+    public Account findById(Integer userId) {
+        return accountDao.findById(userId);
+    }
+
+//    @Override
+//    public Integer updateAcc(Account account) {
+//        return accountDao.updateAcc(account);
+//    }
+
+    @Override
+    public Integer updateAcc(Integer userId,String trueName,Integer sex) {
+        return accountDao.updateAcc(userId,trueName,sex);
+    }
+
+    @Override
+    public Integer updatePwd(String newPwd,Integer userId) {
+        return accountDao.updatePwd(newPwd,userId);
+    }
+
+
 }

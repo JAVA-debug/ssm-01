@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/shop_header.css" type="text/css"/>
     <link rel="stylesheet" href="css/shop_list.css" type="text/css"/>
     <link rel="stylesheet" href="css/shop_goods.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/topNav.js"></script>
     <script type="text/javascript" src="js/shop_goods.js"></script>
 </head>
@@ -196,7 +196,7 @@
 
         </div>
         <div class="shop_goods_show_right">
-            <form action="" method="post">
+
                 <ul>
                     <c:if test="${!empty goodInfo}">
                         <li>
@@ -220,19 +220,20 @@
                         </li>
                         <li class="goods_num">
                             <label>购买数量：</label>
-                            <span><a class="good_num_jian" id="good_num_jian" href="javascript:void(0);"></a><input
-                                    type="text" value="1" id="good_nums" class="good_nums"/><a
-                                    href="javascript:void(0);"
-                                    id="good_num_jia"
-                                    class="good_num_jia"></a>(当前库存0件)</span>
+                            <span><a class="good_num_jian" id="good_num_jian" href="javascript:void(0);"></a>
+                                <input type="text" value="1" id="good_nums" class="good_nums"/>
+                                <a href="javascript:void(0);" id="good_num_jia" class="good_num_jia" stock="${goodInfo.stock}"></a>
+                                (库存${goodInfo.stock}件)
+                            </span>
                         </li>
                         <li style="padding:20px 0;">
                             <label>&nbsp;</label>
-                            <span><a href="" class="goods_sub goods_sub_gou">加入购物车</a></span>
+                            <span><a href="javascript:void(0);" id="add-cart" class="goods_sub goods_sub_gou">加入购物车</a></span>
+<%--                            <button type="submit" value="加入购物车">加入购物车</button>--%>
                         </li>
                     </c:if>
                 </ul>
-            </form>
+
         </div>
     </div>
     <!-- 商品展示 End -->
@@ -357,11 +358,10 @@
         <div class="shop_goods_bd_xiangqing_tab">
             <ul>
                 <li id="xiangqing_tab_1" onmouseover="shop_goods_easytabs('1', '1');"
-                    onfocus="shop_goods_easytabs('1', '1');" onclick="return false;"><a href=""><span>商品详情</span></a>
+                    onfocus="shop_goods_easytabs('1', '1');" onclick="return false;"><a href="#"><span>商品详情</span></a>
                 </li>
                 <li id="xiangqing_tab_2" onmouseover="shop_goods_easytabs('1', '2');"
-                    onfocus="shop_goods_easytabs('1', '2');" onclick="return false;"><a
-                        href="/comment"><span>商品评论</span></a></li>
+                    onfocus="shop_goods_easytabs('1', '2');" onclick="return false;"><a href="#"><span>商品评论</span></a></li>
                 <input type="hidden" id="test" value="${goodInfo.id}">
 
             </ul>
@@ -407,7 +407,7 @@
     $(document).ready(
         $.get("/comment", {"bookid": value}, function (data) {
             if (data.length == 0) {
-                $(".xiangqing_content_2").html("暂时还没有评论")
+                $("#xiangqing_content_2").html("暂时还没有评论")
             } else {
                 var con = "";
                 for (let i = 0; i < data.length; i++) {
@@ -421,6 +421,35 @@
             }
             console.log(data)
 
+        }),
+        $("#add-cart").click(function () {
+            var num = $("#good_nums").val();
+            if (num == '' || parseInt(num) < 1){
+                alert("请选择正确数量！");
+                return;
+            }
+
+            $.ajax({
+                url:'add',
+                data:{num:num,productId: ${goodInfo.id}},
+                dataType:'json',
+                async:false,
+                success:function (data) {
+                    if (data.code == 1){
+                        alert(data.msg)
+                    }else {
+                        alert(data.msg)
+                    }
+                }
+            })
+
+            <%--$.ajax("add",{num:num,productId:${goodInfo.id}},"json",function (data) {--%>
+            <%--    if (data.code == 1){--%>
+            <%--        alert(data.msg)--%>
+            <%--    }else {--%>
+            <%--        alert(data.msg)--%>
+            <%--    }--%>
+            <%--})--%>
         })
     )
 

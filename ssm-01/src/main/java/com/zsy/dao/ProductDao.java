@@ -18,4 +18,7 @@ public interface ProductDao {
 
 //    详情
     Product good(Integer id);
+
+//    更新销量，库存
+    Integer updatePro(Product product);
 }

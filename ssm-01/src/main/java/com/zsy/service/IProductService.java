@@ -12,4 +12,6 @@ public interface IProductService {
     List<Product> novel(Integer id);
 
     Product good(Integer id);
+
+    Integer updatePro(Product product);
 }
