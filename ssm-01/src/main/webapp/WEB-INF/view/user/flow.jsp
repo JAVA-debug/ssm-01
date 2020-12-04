@@ -18,38 +18,10 @@
 	<div class="shop_hd">
 		<!-- Header TopNav -->
 		<c:import url="module/top.jsp"></c:import>
-		<div class="clear"></div>
 		<!-- Header TopNav End -->
 
 		<!-- TopHeader Center -->
-		<div class="shop_hd_header">
-			<div class="shop_hd_header_logo"><h1 class="logo"><a href="/"><img src="images/logo.png" alt="ShopCZ" /></a><span>ShopCZ</span></h1></div>
-			<div class="shop_hd_header_search">
-                            <ul class="shop_hd_header_search_tab">
-			        <li id="search" class="current">商品</li>
-			        <li id="shop_search">店铺</li>
-			    </ul>
-                            <div class="clear"></div>
-			    <div class="search_form">
-			    	<form method="post" action="index.php">
-			    		<div class="search_formstyle">
-			    			<input type="text" class="search_form_text" name="search_content" value="搜索其实很简单！" />
-			    			<input type="submit" class="search_form_sub" name="secrch_submit" value="" title="搜索" />
-			    		</div>
-			    	</form>
-			    </div>
-                            <div class="clear"></div>
-			    <div class="search_tag">
-			    	<a href="">李宁</a>
-			    	<a href="">耐克</a>
-			    	<a href="">Kappa</a>
-			    	<a href="">双肩包</a>
-			    	<a href="">手提包</a>
-			    </div>
-
-			</div>
-		</div>
-		<div class="clear"></div>
+		<c:import url="module/serach.jsp"></c:import>
 		<!-- TopHeader Center End -->
 
 		<!-- Header Menu -->
@@ -127,7 +99,7 @@
 							</span>
 						</td>
 						<td class="gwc_list_xiaoji"><span>￥<strong class="good_xiaojis">${accountCartList.money}</strong></span></td>
-						<td class="gwc_list_caozuo"><a href="">收藏</a><a href="javascript:void(0);" class="shop_good_delete">删除</a></td>
+						<td class="gwc_list_caozuo"><a href="javascript:void(0);" class="shop_good_delete" cid="${accountCartList.id}" id="delCartItem">删除</a></td>
 					</tr>
 					</c:forEach>
 				</tbody>
@@ -173,6 +145,31 @@
 </body>
 <script>
 	$(document).ready(function () {
+
+		$("#delCartItem").click(function(){
+			var cid = $(this).attr('cid');
+			var $this = $(this);
+			console.log(cid)
+			if(confirm('确认删除该商品吗？')){
+				$.ajax({
+					url:'delCartItem',
+					type:'POST',
+					data:{cartId:cid},
+					dataType:'json',
+					success:function(data){
+						if(data.code == 11){
+							//alert('添加成功!');
+							//window.location.href = 'index';
+							$this.closest('tr').hide('1000').remove();
+							alert(data.msg)
+							calTotalMoney();
+						}else{
+							alert("删除失败，请刷新页面");
+						}
+					}
+				});
+			}
+		});
 		$(".good_num_jian").click(function () {
 			var num = parseInt($(this).next('input').val());
 			num = num - 1;
@@ -198,6 +195,8 @@
 			$(this).closest(".gwc_list_shuliang").next(".gwc_list_xiaoji").find(".good_xiaojis").text(money);
 			calTotalMoney()
 		});
+
+
 		calTotalMoney();
 	});
 	function calTotalMoney() {
@@ -228,5 +227,6 @@
 		});
 		return ret;
 	}
+
 </script>
 </html>

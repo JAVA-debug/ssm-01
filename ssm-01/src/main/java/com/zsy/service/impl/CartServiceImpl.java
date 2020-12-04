@@ -2,6 +2,7 @@ package com.zsy.service.impl;
 
 import com.zsy.dao.CartDao;
 import com.zsy.domain.Cart;
+import com.zsy.domain.Favorite;
 import com.zsy.service.ICartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -52,6 +53,27 @@ public class CartServiceImpl implements ICartService {
     @Override
     public Integer delCart(Integer userId) {
         return cartDao.delCart(userId);
+    }
+
+    @Override
+    public Integer addFav(Favorite favorite) {
+        return cartDao.addFav(favorite);
+//        Integer oneFav = cartDao.findOneFav(favorite.getProductId(), favorite.getUserId());
+//        System.out.println(oneFav);
+//        if (oneFav == null && oneFav <= 0){
+//            return cartDao.addFav(favorite);
+//        }
+//        return 0;
+    }
+
+    @Override
+    public Integer findOneFav(Integer productId, Integer userId) {
+        return cartDao.findOneFav(productId,userId);
+    }
+
+    @Override
+    public Integer delCartItem(Integer id) {
+        return cartDao.delCartItem(id);
     }
 
 

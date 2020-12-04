@@ -25,8 +25,21 @@ public class ProductController {
 
     @RequestMapping("/limit2")
     @ResponseBody
-    public List<Product> limit2(Model model) {
+    public List<Product> limit2() {
         return productService.limit2();
+    }
+
+//    @RequestMapping("/search")
+//    @ResponseBody
+//    public List<Product> searchProduct(String searchText){
+//        List<Product> products = productService.searchProduct(searchText);
+//        return products;
+//    }
+    @RequestMapping("/search")
+    public String searchProduct(String searchText,Model model){
+        List<Product> products = productService.searchProduct(searchText);
+        model.addAttribute("searchContext",products);
+        return "user/list";
     }
 
 }

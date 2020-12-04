@@ -35,4 +35,16 @@
     <delete id="delCart">
         delete from cart where userId = #{userId}
     </delete>
+
+    <insert id="addFav" parameterType="favorite">
+        insert into favorite(userId,productId,name,imageUrl,price,createTime) values (#{userId},#{productId},#{name},#{imageUrl},#{price},#{createTime})
+    </insert>
+    
+    <select id="findOneFav" resultType="Integer">
+        select * from favorite where userId = #{userId} and productId = #{productId};
+    </select>
+
+    <delete id="delCartItem">
+        delete from cart where id = #{id}
+    </delete>
 </mapper>

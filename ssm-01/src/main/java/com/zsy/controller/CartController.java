@@ -11,6 +11,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
@@ -57,6 +58,32 @@ public class CartController {
             return getJSONString(3, "添加购物车成功");
         }
         return getJSONString(2, "未知错误");
+    }
+//    @RequestParam("productId") Integer productId,
+    @RequestMapping("/addFav")
+    @ResponseBody
+    public String addFav(@RequestParam("productId") Integer productId,HttpServletRequest request){
+
+        Account account = (Account) request.getSession().getAttribute("account");
+        Product good = productService.good(productId);
+
+        Favorite favorite = new Favorite();
+        favorite.setUserId(account.getId());
+        favorite.setProductId(productId);
+        favorite.setName(good.getName());
+        favorite.setImageUrl(good.getImageUrl());
+        favorite.setPrice(good.getPrice());
+        favorite.setCreateTime(new Date());
+
+
+        Integer res = cartService.findOneFav(productId, account.getId());
+        if (res != null && res > 0){
+            return getJSONString(9,"已经添加过了");
+        }
+
+        cartService.addFav(favorite);
+
+        return getJSONString(10,"收藏成功");
     }
 
     @RequestMapping("/total")
@@ -159,6 +186,14 @@ public class CartController {
         Integer order = ordersService.findOne(orderId);
         model.addAttribute("order",order);
         return "user/flow3";
+    }
+
+    @RequestMapping("/delCartItem")
+    @ResponseBody
+    public String delCartItem(@RequestParam("cartId") Integer id,HttpServletRequest request){
+        Account account = (Account) request.getSession().getAttribute("account");
+        cartService.delCartItem(id);
+        return getJSONString(11,"删除成功");
     }
 
 

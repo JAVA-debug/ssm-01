@@ -25,4 +25,8 @@
     <update id="updatePro" parameterType="product">
         update product set stock = #{stock},sellNum = #{sellNum} where id = #{id}
     </update>
+
+    <select id="searchProduct" resultType="product">
+        select * from product where name like concat('%',#{name},'%');
+    </select>
 </mapper>

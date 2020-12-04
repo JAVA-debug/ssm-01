@@ -1,6 +1,8 @@
 package com.zsy.service;
 
 import com.zsy.domain.Cart;
+import com.zsy.domain.Favorite;
+import org.apache.ibatis.annotations.Param;
 
 
 import java.util.List;
@@ -21,4 +23,10 @@ public interface ICartService {
     Cart findById(Integer id);
 
     Integer delCart(Integer userId);
+
+    Integer addFav(Favorite favorite);
+
+    Integer findOneFav(Integer productId, Integer userId);
+
+    Integer delCartItem(Integer id);
 }

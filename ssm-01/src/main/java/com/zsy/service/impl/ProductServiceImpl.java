@@ -40,5 +40,10 @@ public class ProductServiceImpl implements IProductService {
         return productDao.updatePro(product);
     }
 
+    @Override
+    public List<Product> searchProduct(String name) {
+        return productDao.searchProduct(name);
+    }
+
 
 }

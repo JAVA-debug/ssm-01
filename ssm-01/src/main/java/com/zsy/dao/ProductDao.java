@@ -21,4 +21,7 @@ public interface ProductDao {
 
 //    更新销量，库存
     Integer updatePro(Product product);
+
+//    搜索商品
+    List<Product> searchProduct(String name);
 }

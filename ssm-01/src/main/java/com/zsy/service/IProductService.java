@@ -14,4 +14,6 @@ public interface IProductService {
     Product good(Integer id);
 
     Integer updatePro(Product product);
+
+    List<Product> searchProduct(String name);
 }
