@@ -15,11 +15,11 @@
     </select>
     
     <select id="novel" resultType="product">
-        select * from product where productCategoryId = #{id};
+        select * from product where productCategoryId = #{id}
     </select>
     
     <select id="good" resultType="product">
-        select * from product where id = #{id};
+        select * from product where id = #{id}
     </select>
 
     <update id="updatePro" parameterType="product">
@@ -27,6 +27,14 @@
     </update>
 
     <select id="searchProduct" resultType="product">
-        select * from product where name like concat('%',#{name},'%');
+        select * from product where name like concat('%',#{name},'%')
     </select>
+
+    <select id="findAll" resultType="product">
+        select * from product
+    </select>
+
+    <update id="updateCom">
+        update product set commentNum = commentNum + 1 WHERE id = #{productId}
+    </update>
 </mapper>

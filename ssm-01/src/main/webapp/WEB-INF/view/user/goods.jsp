@@ -54,13 +54,7 @@
     <!-- TopHeader Center End -->
 
     <!-- Header Menu -->
-    <div class="shop_hd_menu">
-        <!-- 所有商品菜单 -->
-
-        <c:import url="module/shopMenu.jsp"></c:import>
-        <!-- 所有商品菜单 END -->
-
-    </div>
+    <c:import url="module/shopMenu.jsp"></c:import>
     <!-- Header Menu End -->
 
 </div>
@@ -169,8 +163,8 @@
 
                 <ul>
                     <c:if test="${!empty goodInfo}">
-                        <li>
-                            <strong style="font-size:14px; font-weight:bold;">${goodInfo.name}</strong>
+                        <li style="font-size:14px; font-weight:bold;">
+                            ${goodInfo.name}
                         </li>
                         <li>
                             <label>价格：</label>

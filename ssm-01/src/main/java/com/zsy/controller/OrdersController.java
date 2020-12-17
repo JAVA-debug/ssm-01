@@ -1,15 +1,19 @@
 package com.zsy.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.zsy.domain.Account;
 import com.zsy.domain.Favorite;
 import com.zsy.domain.OrderItem;
 import com.zsy.domain.Orders;
+import com.zsy.service.IFavoriteService;
+import com.zsy.service.IOrdersService;
 import com.zsy.service.impl.FavoriteServiceImpl;
 import com.zsy.service.impl.OrdersServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -17,28 +21,25 @@ import java.util.List;
 @Controller
 public class OrdersController {
     @Autowired
-    private OrdersServiceImpl ordersService;
+    private IOrdersService ordersService;
 
     @Autowired
-    private FavoriteServiceImpl favoriteService;
+    private IFavoriteService favoriteService;
+
+
 
     @RequestMapping("/order")
     public String order(Integer userId, Model model){
 
         List<Orders> orders = ordersService.findAll(userId);
+
+        for (Orders order : orders) {
+            order.setOrderItems(ordersService.findById(order.getId()));
+        }
+
         model.addAttribute("order",orders);
 
-        List<OrderItem> allItem = ordersService.findAllItem(userId);
-        System.out.println(allItem);
-        model.addAttribute("item",allItem);
 
-
-        for (OrderItem orderItem : allItem) {
-            Integer orderId = orderItem.getOrderId();
-            Integer one = ordersService.findOne(orderId);
-//            System.out.println(one);
-            model.addAttribute("one",one);
-        }
 
         return "user/member";
     }
@@ -51,4 +52,23 @@ public class OrdersController {
         model.addAttribute("fav",allFav);
         return "user/favorite";
     }
+
+    @RequestMapping("/finish_order")
+    @ResponseBody
+    public String finishOrder(Integer id){
+        Integer integer = ordersService.finishOrder(id);
+        if (integer == 1){
+            return getJSONString(1,"收货成功");
+        }
+        return getJSONString(2,"error");
+    }
+
+    public static String getJSONString(int code, String msg) {
+        JSONObject json = new JSONObject();
+        json.put("code", code);
+        json.put("msg", msg);
+        return json.toJSONString();
+    }
+
+
 }

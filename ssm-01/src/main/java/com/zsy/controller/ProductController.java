@@ -22,7 +22,6 @@ public class ProductController {
         return productService.limit(start,end);
     }
 
-
     @RequestMapping("/limit2")
     @ResponseBody
     public List<Product> limit2() {

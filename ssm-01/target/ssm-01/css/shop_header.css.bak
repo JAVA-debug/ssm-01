@@ -5,7 +5,7 @@
 
 .shop_hd_topNav_all_left{float:left; height:20px; width:550px; padding:4px 0 5px; line-height:20px; margin:0; overflow:hidden;}
 .shop_hd_topNav_all_left a{margin:0 4px; color:#666666;}
-.shop_hd_topNav_all_left a:hover{color:#FF3300;}
+.shop_hd_topNav_all_left a:hover{color:#fe3023;}
 
 .shop_hd_topNav_all_right{float:left;}
 

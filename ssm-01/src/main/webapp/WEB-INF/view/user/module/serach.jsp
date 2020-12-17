@@ -5,7 +5,7 @@
   Time: 0:26
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
     <title>Title</title>
@@ -13,8 +13,8 @@
 <body>
 <div class="shop_hd_header">
     <div class="shop_hd_header_logo"><h1 class="logo"><a href="${pageContext.request.contextPath}/"><img
-            src="images/logo.png"
-            alt="ShopCZ"/></a><span>ShopCZ</span></h1>
+            src="images/dingdang.png"
+            alt="DDang" width="180px" height="80px"/></a><span>ShopCZ</span></h1>
     </div>
 
     <div class="shop_hd_header_search">

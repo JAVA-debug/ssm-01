@@ -28,13 +28,7 @@
 		<!-- TopHeader Center End -->
 
 		<!-- Header Menu -->
-		<div class="shop_hd_menu">
-			<!-- 所有商品菜单 -->
-
-			<c:import url="module/shopMenu.jsp"></c:import>
-
-			<!-- 普通导航菜单 End -->
-		</div>
+		<c:import url="module/shopMenu.jsp"></c:import>
 		<!-- Header Menu End -->
 
 	</div>

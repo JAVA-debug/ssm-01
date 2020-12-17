@@ -70,7 +70,7 @@
 /* 商城首页-促销\活动\推荐商品模块 */
 .nc-home-sale .tabs-nav { background:#F7F7F7; height:28px; border: solid 1px #E7E7E7; width:748px; position:relative; z-index:1;}
 .nc-home-sale .tabs-nav li { width:210px; font-weight:700; line-height:28px; text-align:center; display:block; float:left; position:relative; z-index:5;}
-.nc-home-sale .tabs-nav li.tabs-selected { font-size: 14px; line-height:33px; background:#FFF; border-style:solid; border-width: 2px 1px 0 1px; border-color: #FE8502 #E7E7E7 #FFF #E7E7E7; width:208px; height:33px; position:relative; z-index:9; margin-top:-6px; margin-left:-1px;}
+.nc-home-sale .tabs-nav li.tabs-selected { font-size: 14px; line-height:33px; background:#FFF; border-style:solid; border-width: 2px 1px 0 1px; border-color: #FE3023 #E7E7E7 #FFF #E7E7E7; width:208px; height:33px; position:relative; z-index:9; margin-top:-6px; margin-left:-1px;}
 .nc-home-sale .tabs-nav li.tabs-selected a { color:#EA5404;}
 .nc-home-sale .tabs-panel { background:#FFF; border:solid #E7E7E7; border-width: 0 1px 1px 1px; height: 256px; width:748px;}
 
@@ -214,8 +214,8 @@
 .style-orange .leftbar, .style-orange .middle, .style-orange .tabs-nav, .style-orange .bottom-bar { border-color:#EEBE8E;}
 .style-orange .leftbar .category dl { border-color:#FBE9D6;}
 .style-orange .leftbar, .style-orange .tabs-nav {background:#FFF7EE;}
-.style-orange .tabs-nav li.tabs-selected { border-color:#FE8502 #EEBE8E #FFF #EEBE8E;}
-.style-orange .tabs-nav li.tabs-selected a, .style-orange .leftbar .category dl dt a:hover {color:#FE8502; }
+.style-orange .tabs-nav li.tabs-selected { border-color:#FE3023 #EEBE8E #FFF #EEBE8E;}
+.style-orange .tabs-nav li.tabs-selected a, .style-orange .leftbar .category dl dt a:hover {color:#FE3023; }
 .style-orange .bottom-bar ul.brands li:hover .brands-name a, .style-orange .leftbar .category dl dd a:hover { background-color: rgba(254,133,2,0.95); filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#D8FE8502', endColorstr='#D8FE8502')/*IE*/; text-shadow: 1px 1px 0 rgba(254,133,2,1);}
 :root .style-orange .bottom-bar ul.brands li:hover .brands-name a, :root .style-orange .leftbar .category dl dd a:hover{filter:none;}/*for IE9*/
 /* 灰色 */

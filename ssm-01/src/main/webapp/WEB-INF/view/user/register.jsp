@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="header wrap1000">
-    <a href=""><img src="images/logo.png" alt=""/></a>
+    <a href=""><img src="images/dingdang.png" alt="" width="180px" height="75px"/></a>
 </div>
 
 <div class="main">
@@ -59,22 +59,7 @@
     </div>
 
     <div class="login-form-left fl">
-        <dl class="func clearfix">
-            <dt>注册之后您可以</dt>
-            <dd class="ico05"><i></i>购买商品支付订单</dd>
-            <dd class="ico01"><i></i>申请开店销售商品</dd>
-            <dd class="ico03"><i></i>空间好友推送分享</dd>
-            <dd class="ico02"><i></i>收藏商品关注店铺</dd>
-            <dd class="ico06"><i></i>商品资讯服务评价</dd>
-            <dd class="ico04"><i></i>安全交易诚信无忧</dd>
-        </dl>
-
-        <div class="if">
-            <h2>如果您是本站用户</h2>
-            <p>我已经注册过账号，立即 <a href="${pageContext.request.contextPath}/login" class="register">登录</a> 或是 <a href=""
-                                                                                                            class="findpwd">找回密码？</a>
-            </p>
-        </div>
+        <img src="images/left.png" alt="" style="width: 450px;"/>
     </div>
 </div>
 

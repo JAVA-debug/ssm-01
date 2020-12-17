@@ -23,4 +23,12 @@
     <insert id="addItem" useGeneratedKeys="true" keyProperty="id">
         insert into order_item (productId,orderId,name,imageUrl,price,num,money) values (#{productId},#{orderId},#{name},#{imageUrl},#{price},#{num},#{money});
     </insert>
+    
+    <select id="findById" resultType="OrderItem">
+        select * from order_item where orderId = #{orderId};
+    </select>
+
+    <update id="finishOrder">
+        update orders set status = 2 where id = #{orderId}
+    </update>
 </mapper>

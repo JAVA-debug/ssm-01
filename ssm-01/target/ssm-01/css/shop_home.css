@@ -27,7 +27,7 @@
 .sub_no li.show{background:#FF7700; color:#FFFFFF;}
 /*********图片切换 css定义***********/
 
-.shop_bd_top_right{width:240px;float:left;}
+.shop_bd_top_right{width:423px;float:right;}
 .shop_bd_top_right_quickLink{width:240px; height:58px;border:1px solid #E7E7E7;margin-left: 200px;}
 .shop_bd_top_right_quickLink a{display: inline-block; width:75px; height:58px; text-align:center; font-size:14px; text-decoration: none; color:#555555; font-weight: bold;}
 .shop_bd_top_right_quickLink a i{display: block; margin-top:3px; margin-bottom:3px; margin-left:20px; width:32px; height:32px; background:url('../images/nc_home_index.gif') no-repeat left top;}
@@ -35,8 +35,8 @@
 .shop_bd_top_right_quickLink a.register i{background:url('../images/nc_home_index.gif') no-repeat -35px top;}
 .shop_bd_top_right_quickLink a.join i{background:url('../images/nc_home_index.gif') no-repeat -70px top;}
 
-.shop_bd_top_right-style1{width:240px; margin-top:10px; border:1px solid #E7E7E7;margin-left: 200px}
-.shop_bd_top_right-style1 ul.tabs-nav{width:230px; padding:0 5px; height:34px; border-bottom: 1px solid #E7E7E7; background-color:#F7F7F7; line-height: 34px;}
+.shop_bd_top_right-style1{width:220px; margin-top:10px; border:1px solid #E7E7E7;margin-left: 200px}
+.shop_bd_top_right-style1 ul.tabs-nav{width:210px; padding:0 5px; height:34px; border-bottom: 1px solid #E7E7E7; background-color:#F7F7F7; line-height: 34px;}
 .shop_bd_top_right-style1 ul.tabs-nav li{float:left;}
 .shop_bd_top_right-style1 ul.tabs-nav li a{line-height:30px; display: inline-block; height:30px; margin-top:4px; padding: 0 12px; color:#333;}
 .shop_bd_top_right-style1 ul.tabs-nav li a.hover{background-color:#FFF; font-weight: bold; border:1px solid #E7E7E7; border-bottom: none;}

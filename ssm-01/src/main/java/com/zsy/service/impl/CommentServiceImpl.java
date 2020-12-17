@@ -24,4 +24,19 @@ public class CommentServiceImpl implements ICommentService {
     public List<AccountComment> OneComment(Integer id) {
         return commentDao.OneComment(id);
     }
+
+    @Override
+    public List<Comment> findList(Integer userId) {
+        return commentDao.findList(userId);
+    }
+
+    @Override
+    public Integer delComment(Integer id) {
+        return commentDao.delComment(id);
+    }
+
+    @Override
+    public Integer addComment(Comment comment) {
+        return commentDao.addComment(comment);
+    }
 }

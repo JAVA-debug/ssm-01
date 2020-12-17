@@ -24,4 +24,9 @@ public interface ProductDao {
 
 //    搜索商品
     List<Product> searchProduct(String name);
+
+    List<Product> findAll();
+
+//    评论+1
+    Integer updateCom(Integer productId);
 }

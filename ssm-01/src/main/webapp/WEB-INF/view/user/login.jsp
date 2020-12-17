@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="header wrap1000">
-    <a href=""><img src="images/logo.png" alt=""/></a>
+    <a href=""><img src="images/dingdang.png" alt="" width="180px" height="75px"/></a>
 </div>
 
 <div class="main">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="login-form-left fl">
-        <img src="images/left.jpg" alt=""/>
+        <img src="images/left.png" alt="" style="width: 450px;"/>
     </div>
 </div>
 

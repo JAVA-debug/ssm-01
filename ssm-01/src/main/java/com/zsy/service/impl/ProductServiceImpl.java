@@ -45,5 +45,15 @@ public class ProductServiceImpl implements IProductService {
         return productDao.searchProduct(name);
     }
 
+    @Override
+    public List<Product> findAll() {
+        return productDao.findAll();
+    }
+
+    @Override
+    public Integer updateCom(Integer productId) {
+        return productDao.updateCom(productId);
+    }
+
 
 }

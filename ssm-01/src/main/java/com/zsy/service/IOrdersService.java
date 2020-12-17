@@ -13,4 +13,8 @@ public interface IOrdersService {
     Integer findOne(Integer orderId);
 
     Integer addOrder(Orders orders);
+
+    List<OrderItem> findById(Integer orderId);
+
+    Integer finishOrder(Integer orderId);
 }

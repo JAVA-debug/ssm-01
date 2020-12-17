@@ -8,7 +8,7 @@
 
 .shop_goods_show_right{float:left; width:630px; position:relative; top:-21px; }
 .shop_goods_show_right ul{width:600px; padding:10px;}
-.shop_goods_show_right ul li{padding:0px 0; height:40px; line-height: 40px;}
+.shop_goods_show_right ul li{padding:0px 0; height:65px; line-height: 40px;}
 .shop_goods_show_right ul li label{width:100px; padding-right: 10px; text-align: right; float:left; height:40px; line-height:40px;}
 .shop_goods_show_right ul li span strong{font-weight:bold; font-size:18px; color:#FF3311; margin-right: 5px;}
 .shop_goods_show_right ul li input.good_nums{width:40px; text-align: center; height:20px; line-height:20px;}

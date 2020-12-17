@@ -25,12 +25,7 @@
 		<!-- TopHeader Center End -->
 
 		<!-- Header Menu -->
-		<div class="shop_hd_menu">
-			<!-- 所有商品菜单 -->
-
-			<c:import url="module/shopMenu.jsp"></c:import>
-			<!-- 普通导航菜单 End -->
-		</div>
+		<c:import url="module/shopMenu.jsp"></c:import>
 		<!-- Header Menu End -->
 
 	</div>
@@ -89,7 +84,7 @@
 					<c:forEach items="${accountCart}" var="accountCartList">
 					<tr>
 						<td class="gwc_list_pic"><a href=""><img src="${accountCartList.imageUrl}" /></a></td>
-						<td class="gwc_list_title"><a href="">${accountCartList.name} </a></td>
+						<td class="gwc_list_title" width="490px"><a href="">${accountCartList.name} </a></td>
 						<td class="gwc_list_danjia"><span>￥<strong id="danjia_001">${accountCartList.price}</strong></span></td>
 						<td class="gwc_list_shuliang">
 							<span>
@@ -163,6 +158,7 @@
 							$this.closest('tr').hide('1000').remove();
 							alert(data.msg)
 							calTotalMoney();
+							window.location.reload();
 						}else{
 							alert("删除失败，请刷新页面");
 						}

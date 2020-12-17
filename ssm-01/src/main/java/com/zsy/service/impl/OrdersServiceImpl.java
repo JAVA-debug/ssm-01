@@ -40,4 +40,14 @@ public class OrdersServiceImpl implements IOrdersService {
         }
         return 1;
     }
+
+    @Override
+    public List<OrderItem> findById(Integer orderId) {
+        return ordersDao.findById(orderId);
+    }
+
+    @Override
+    public Integer finishOrder(Integer orderId) {
+        return ordersDao.finishOrder(orderId);
+    }
 }

@@ -644,11 +644,6 @@
 
         <!-- 右侧 -->
         <div class="shop_bd_top_right clearfix">
-            <div class="shop_bd_top_right_quickLink">
-                <a href="" class="login" title="会员登录"><i></i>会员登录</a>
-                <a href="" class="register" title="免费注册"><i></i>免费注册</a>
-                <a href="" class="join" title="商家开店"><i></i>帮助中心</a>
-            </div>
 
             <div class="shop_bd_top_right-style1 nc-home-news">
                 <ul class="tabs-nav">

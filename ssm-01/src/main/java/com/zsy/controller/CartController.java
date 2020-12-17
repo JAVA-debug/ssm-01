@@ -2,6 +2,10 @@ package com.zsy.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.zsy.domain.*;
+import com.zsy.service.IAddressService;
+import com.zsy.service.ICartService;
+import com.zsy.service.IOrdersService;
+import com.zsy.service.IProductService;
 import com.zsy.service.impl.AddressServiceImpl;
 import com.zsy.service.impl.CartServiceImpl;
 import com.zsy.service.impl.OrdersServiceImpl;
@@ -23,13 +27,13 @@ import java.util.List;
 public class CartController {
 
     @Autowired
-    private CartServiceImpl cartService;
+    private ICartService cartService;
     @Autowired
-    private ProductServiceImpl productService;
+    private IProductService productService;
     @Autowired
-    private AddressServiceImpl addressService;
+    private IAddressService addressService;
     @Autowired
-    private OrdersServiceImpl ordersService;
+    private IOrdersService ordersService;
 
     @RequestMapping("/add")
     @ResponseBody

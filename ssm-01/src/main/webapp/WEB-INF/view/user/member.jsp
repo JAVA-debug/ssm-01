@@ -66,30 +66,40 @@
                     <c:forEach items="${order}" var="orders">
                         <tr>
                             <td colspan="5">
-                                <table class="good">
+                                <table class="good" style="font-size: 12px">
                                     <thead>
                                     <tr>
                                         <th colspan="6">
                                             <span><strong>订单号码：</strong>${orders.sn}</span>
                                         </th>
+                                            <c:if test="${orders.status == 0}">
+                                                <span class="digndan_caozuo">待发货</span>
+                                            </c:if>
+                                            <c:if test="${orders.status == 1}">
+                                                <span class="digndan_caozuo">已发货</span>
+                                                <a href="javascript:void(0)" data-id="${orders.id}" class="finish-order-btn">[确认收货]</a>
+                                            </c:if>
+                                            <c:if test="${orders.status == 2}">
+                                                <span class="digndan_caozuo">已完成</span>
+                                            </c:if>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <c:forEach items="${item}" var="items" begin="1" end="${one}">
+                                    <c:forEach items="${orders.orderItems}" var="orderItem">
                                         <tr>
-                                            <td class="dingdan_pic"><img src="${items.imageUrl}"/></td>
+                                            <td class="dingdan_pic"><img src="${orderItem.imageUrl}"/></td>
                                             <td class="dingdan_title">
-                                                <span><a href="">${items.name}</a></span><br/>
+                                                <span><a href="">${orderItem.name}</a></span><br/>
                                             </td>
-                                            <td class="dingdan_danjia">￥<strong>${items.price}</strong></td>
-                                            <td class="dingdan_shuliang">${items.num}</td>
-                                            <td class="dingdan_zongjia">￥<strong>${items.money}</strong><br/>(免运费)</td>
-                                            <c:if test="${orders.status == 0}">
-                                                <td class="digndan_caozuo">已付款</td>
-                                            </c:if>
-                                            <c:if test="${orders.status == 1}">
-                                                <td class="digndan_caozuo">已收货</td>
-                                            </c:if>
+                                            <td class="dingdan_danjia">￥<strong>${orderItem.price}</strong></td>
+                                            <td class="dingdan_shuliang">${orderItem.num}</td>
+                                            <td class="dingdan_zongjia">￥<strong>${orderItem.money}</strong><br/>(免运费)</td>
+                                            <td class="digndan_caozuo">
+
+                                                <c:if test="${orders.status == 2 }">
+                                                    <a href="/toAddComment?pid=${orderItem.productId}">评价</a>
+                                                </c:if>
+                                            </td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
@@ -98,6 +108,24 @@
                         </tr>
                     </c:forEach>
                 </c:if>
+
+                <%--                <c:forEach items="${item}" var="items" begin="1" end="${one}">--%>
+                <%--                    <tr>--%>
+                <%--                        <td class="dingdan_pic"><img src="${items.imageUrl}"/></td>--%>
+                <%--                        <td class="dingdan_title">--%>
+                <%--                            <span><a href="">${items.name}</a></span><br/>--%>
+                <%--                        </td>--%>
+                <%--                        <td class="dingdan_danjia">￥<strong>${items.price}</strong></td>--%>
+                <%--                        <td class="dingdan_shuliang">${items.num}</td>--%>
+                <%--                        <td class="dingdan_zongjia">￥<strong>${items.money}</strong><br/>(免运费)</td>--%>
+                <%--                        <c:if test="${orders.status == 0}">--%>
+                <%--                            <td class="digndan_caozuo">已付款</td>--%>
+                <%--                        </c:if>--%>
+                <%--                        <c:if test="${orders.status == 1}">--%>
+                <%--                            <td class="digndan_caozuo">已收货</td>--%>
+                <%--                        </c:if>--%>
+                <%--                    </tr>--%>
+                <%--                </c:forEach>--%>
 
                 <%--						<tr><td colspan="5">--%>
                 <%--							<table class="good">--%>
@@ -167,4 +195,29 @@
 </div>
 <!-- Footer End -->
 </body>
+<script>
+    $(document).ready(function(){
+        $(".finish-order-btn").click(function(){
+            var $this = $(this);
+            if(confirm("确定收货?")){
+                $.ajax({
+                    url:'finish_order',
+                    type:'POST',
+                    data:{id:$this.attr('data-id')},
+                    dataType:'json',
+                    async:false,
+                    success:function(data){
+                        if(data.code == 1){
+                            alert(data.msg);
+                            window.location.reload();
+                        }else{
+                            alert(data.msg);
+                        }
+                    }
+                });
+            }
+        });
+    });
+
+</script>
 </html>

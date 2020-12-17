@@ -41,6 +41,8 @@ public class GoodDetailController {
         return comments;
     }
 
+
+
 //    @RequestMapping("/comment")
 //    public String comment(@RequestParam("bookid") Integer id,Model model){
 //        List<AccountComment> accountComments = commentService.OneComment(id);

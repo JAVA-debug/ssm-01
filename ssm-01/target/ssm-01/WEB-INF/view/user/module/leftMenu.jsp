@@ -23,7 +23,7 @@
         <dt>我的交易</dt>
         <dd><span><a href="/order?userId=${sessionScope.account.id}">我的订单</a></span></dd>
         <dd><span><a href="/favorite">我的收藏</a></span></dd>
-        <dd><span><a href="">评价管理</a></span></dd>
+        <dd><span><a href="/commentList">评价管理</a></span></dd>
     </dl>
 
     <dl>

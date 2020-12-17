@@ -22,7 +22,7 @@
                 <p style="color:blue;">欢迎， ${account.username}</p>
             </c:if>
             <c:if test="${empty account}">
-                <p>您好，欢迎来到<b><a href="/">ShopCZ商城</a></b>[<a href="${pageContext.request.contextPath}/login">登录</a>][<a
+                <p>您好，欢迎来到<b><a href="/">叮当书城</a></b>[<a href="${pageContext.request.contextPath}/login">登录</a>][<a
                         href="${pageContext.request.contextPath}/regist">注册</a>]</p>
 
             </c:if>

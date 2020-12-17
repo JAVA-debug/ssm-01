@@ -11,6 +11,14 @@ public interface CommentDao {
     @Select("select * from comment")
     List<Comment> findAll();
 
-//    @Select("SELECT * from account WHERE id = (SELECT userId from comment WHERE productId = #{bookid})")
+    //    @Select("SELECT * from account WHERE id = (SELECT userId from comment WHERE productId = #{bookid})")
     List<AccountComment> OneComment(@Param("bookid") Integer id);
+
+    List<Comment> userComment(@Param("userId") Integer userId, @Param("productId") Integer productId);
+
+    List<Comment> findList(Integer userId);
+
+    Integer delComment(Integer id);
+
+    Integer addComment(Comment comment);
 }

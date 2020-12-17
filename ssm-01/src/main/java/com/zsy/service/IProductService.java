@@ -16,4 +16,8 @@ public interface IProductService {
     Integer updatePro(Product product);
 
     List<Product> searchProduct(String name);
+
+    List<Product> findAll();
+
+    Integer updateCom(Integer productId);
 }

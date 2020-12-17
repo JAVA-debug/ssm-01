@@ -22,4 +22,10 @@ public interface OrdersDao {
 
 //    给每个item添加
     Integer addItem(OrderItem orderItem);
+
+//    每个订单的详细item
+    List<OrderItem> findById(Integer orderId);
+
+//    完成收货
+    Integer finishOrder(Integer orderId);
 }
