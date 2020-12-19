@@ -21,4 +21,8 @@ public interface CommentDao {
     Integer delComment(Integer id);
 
     Integer addComment(Comment comment);
+
+//    管理员查看所有评论
+    List<Comment> commentAll();
+
 }

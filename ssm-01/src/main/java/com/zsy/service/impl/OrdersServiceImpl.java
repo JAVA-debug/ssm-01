@@ -50,4 +50,24 @@ public class OrdersServiceImpl implements IOrdersService {
     public Integer finishOrder(Integer orderId) {
         return ordersDao.finishOrder(orderId);
     }
+
+    @Override
+    public List<Orders> orderAll() {
+        return ordersDao.orderAll();
+    }
+
+    @Override
+    public Integer sendOrder(Integer orderId) {
+        return ordersDao.sendOrder(orderId);
+    }
+
+    @Override
+    public Integer delOrder(Integer orderId) {
+        Integer integer = ordersDao.delOrderItem(orderId);
+        System.out.println(integer);
+        if (integer == -1) {
+            return -1;
+        }
+        return ordersDao.delOrder(orderId);
+    }
 }

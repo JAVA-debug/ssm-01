@@ -22,5 +22,7 @@ public interface IAccountService {
 
     Integer updatePwd(String newPwd,Integer userId);
 
+    Integer accUpdate(Account account);
 
+    Integer delAcc(Integer id);
 }

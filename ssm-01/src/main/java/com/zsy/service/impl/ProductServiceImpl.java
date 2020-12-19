@@ -55,5 +55,15 @@ public class ProductServiceImpl implements IProductService {
         return productDao.updateCom(productId);
     }
 
+    @Override
+    public Integer proUpdate(Product product) {
+        return productDao.proUpdate(product);
+    }
+
+    @Override
+    public Integer proDel(Integer id) {
+        return productDao.proDel(id);
+    }
+
 
 }

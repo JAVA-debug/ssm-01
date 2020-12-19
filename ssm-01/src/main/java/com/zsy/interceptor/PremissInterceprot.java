@@ -24,7 +24,6 @@ public class PremissInterceprot implements HandlerInterceptor {
             }
         }else {
             if (account != null){
-
                 return true;
             }
         }

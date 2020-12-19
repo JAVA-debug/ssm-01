@@ -12,10 +12,10 @@
 .KSS_titleBox , .KSS_titleBar { display: none;}
 
 /*商城精选推荐*/
-#mallRecommend { background: url(../images/index_bg.png) no-repeat 0px 0px; width: 530px; display: block; margin-top: 1px;}
+#mallRecommend { background: url(index_bg.png) no-repeat 0px 0px; width: 530px; display: block; margin-top: 1px;}
 #mallRecommend .title { line-height: 22px; width: 98%; height: 22px; padding: 10px 1%;}
 #slideshow { background: #FFF; width: 530px; height: 131px; position: relative; z-index: 1;}
-#slideshow ul { background: url(../images/index_bg.png) no-repeat; width: 472px; height: 131px; position: absolute; z-index: 2; overflow: hidden; top: 0px; left: 29px;}
+#slideshow ul { background: url(index_bg.png) no-repeat; width: 472px; height: 131px; position: absolute; z-index: 2; overflow: hidden; top: 0px; left: 29px;}
 #slideshow ul.twopics { background-image: none;}
 #slideshow .twopics li { display: inline; width: 230px; height: 115px; float: left; margin: 8px 2px;}
 #slideshow ul.fourpics { background-position: 0px -305px;}
@@ -23,9 +23,9 @@
 #slideshow ul.brands { background-position: 0px -174px;}
 #slideshow .current { display: block;}
 #slideshow .normal { display: none;}
-#slideshow .previous { line-height: 1000px; background: url(../images/index_bg.png) no-repeat -466px -174px; width: 17px; height: 17px; position: absolute; z-index: 2; overflow: hidden; top: 57px; left: 5px; cursor: pointer;}
+#slideshow .previous { line-height: 1000px; background: url(index_bg.png) no-repeat -466px -174px; width: 17px; height: 17px; position: absolute; z-index: 2; overflow: hidden; top: 57px; left: 5px; cursor: pointer;}
 #slideshow .previous:hover { background-position: -466px -191px;}
-#slideshow .next { line-height: 1000px; background: url(../images/index_bg.png) no-repeat -483px -174px; width: 17px; height: 17px; position: absolute; top: 57px; right:5px; z-index: 2; overflow: hidden; cursor: pointer; }
+#slideshow .next { line-height: 1000px; background: url(index_bg.png) no-repeat -483px -174px; width: 17px; height: 17px; position: absolute; top: 57px; right:5px; z-index: 2; overflow: hidden; cursor: pointer; }
 #slideshow .next:hover { background-position:-483px -191px;}
 
 
@@ -34,7 +34,7 @@
 #quickLink { background-color:#FFF; width: 238px; height: 58px; overflow: hidden;}
 #quickLink a { width:79px; height:58px; display:inline-block;  position:relative; z-index:1; text-align:center; font-weight:700; color:#555; }
 #quickLink a:hover { background-color: #F26A00; z-index:9; color: #FFF; text-decoration: none;}
-#quickLink a i { display:block; background: url(../images/nc_home_index.png) no-repeat scroll; margin: 4px auto 4px auto; width: 34px; height: 32px;}
+#quickLink a i { display:block; background: url(nc_home_index.png) no-repeat scroll; margin: 4px auto 4px auto; width: 34px; height: 32px;}
 #quickLink a.login i { background-position: 0px 0px;}
 #quickLink a.register i { background-position: -34px 0px;}
 #quickLink a.join i { background-position: -68px 0px;}
@@ -42,9 +42,9 @@
 #quickLink a.register:hover i { background-position: -34px -32px;}
 #quickLink a.join:hover i { background-position: -68px -32px;}
 
-#userInfo { background: url(../images/index_bg.gif) no-repeat -505px 12px; height:42px; padding: 8px 0 8px 45px;  position: relative; z-index: 1; border: solid 1px #E7E7E7; margin-bottom:10px;}
+#userInfo { background: url(index_bg.gif) no-repeat -505px 12px; height:42px; padding: 8px 0 8px 45px;  position: relative; z-index: 1; border: solid 1px #E7E7E7; margin-bottom:10px;}
 #userInfo .head-portrait {  background-color: #555; width: 32px; height:32px; position: absolute; z-index: 9; top: 13px; left: 6px;}
-#userInfo p { font-size: 12px; line-height: 16px; color: #888; vertical-align:middle; background: url(../images/hbg.png) no-repeat 0px -532px; padding: 2px 0 0 10px; margin-bottom: 7px;}
+#userInfo p { font-size: 12px; line-height: 16px; color: #888; vertical-align:middle; background: url(hbg.png) no-repeat 0px -532px; padding: 2px 0 0 10px; margin-bottom: 7px;}
 #userInfo p span { color: #333; text-overflow: ellipsis; vertical-align: middle; white-space: nowrap; display: inline-block; max-width: 56px; overflow: hidden; }
 #userInfo p a { color:#06C;}
 #userInfo p strong { max-width:40px; overflow: hidden; color : #F60; font-weight: normal; display:inline-block; vertical-align:middle; text-overflow:ellipsis; white-space: nowrap;}
@@ -82,7 +82,7 @@
 .nc-home-sale .tabs-panel dl dd.goods-pic { width:150px; height:150px; position:absolute; top:5px; left:5px;}
 .nc-home-sale .tabs-panel dl dd.goods-price { color: #777; line-height:20px; margin-top:5px;}
 .nc-home-sale .tabs-panel dl dd.goods-price em { font-style:normal; font-size: 14px; font-family:Arial, Helvetica, sans-serif; color:#C00; font-weight:700; margin-right:6px;}
-.nc-home-sale .tabs-panel dl dd.sale { font-family: "微软雅黑"; line-height:18px; font-size: 14px; font-weight: 700; color: #FFF; background: url(../images/nc_home_index.gif) no-repeat scroll -310px -30px; text-align:center; width: 36px; height: 36px; padding: 3px 4px 3px 10px; position: absolute; z-index: 99; top: -10px; left: 120px; overflow:hidden;}
+.nc-home-sale .tabs-panel dl dd.sale { font-family: "微软雅黑"; line-height:18px; font-size: 14px; font-weight: 700; color: #FFF; background: url(nc_home_index.gif) no-repeat scroll -310px -30px; text-align:center; width: 36px; height: 36px; padding: 3px 4px 3px 10px; position: absolute; z-index: 99; top: -10px; left: 120px; overflow:hidden;}
 
 
 /* 商城首页-团购模块 */
@@ -96,12 +96,12 @@
 .nc-index-groupbuy dl dt.name a { color:#555555; }
 .nc-index-groupbuy dl dd.fixed { width: 120px; height: 120px; position: absolute; z-index: 2; top: 59px; left: 7px; overflow: hidden;}
 .nc-index-groupbuy dl dd.fixed .picture a { /* if IE7/8/9*/ *text-align: center; display: inline; width: 120px; height: 120px; float: left; padding: 0;  margin:1px; }
-.nc-index-groupbuy dl dd.priceLabel { font-size: 24px; line-height: 28px; color: #FFF; background: url(../images/nc_home_index.gif) no-repeat -120px 0px; text-align: center; width: 129px; height: 46px; padding: 9px 0; position: absolute; top: 56px; right: -3px; z-index: 3; overflow: hidden;}
-.nc-index-groupbuy dl dd.discount { line-height: 14px; color: #555; background: url(../images/nc_home_index.gif) no-repeat scroll -250px 0px; white-space: nowrap; height: 70px; width: 50px; padding:10px 0 0; position: absolute; z-index: 3; overflow: hidden; top: 100px; left: 130px;}
+.nc-index-groupbuy dl dd.priceLabel { font-size: 24px; line-height: 28px; color: #FFF; background: url(nc_home_index.gif) no-repeat -120px 0px; text-align: center; width: 129px; height: 46px; padding: 9px 0; position: absolute; top: 56px; right: -3px; z-index: 3; overflow: hidden;}
+.nc-index-groupbuy dl dd.discount { line-height: 14px; color: #555; background: url(nc_home_index.gif) no-repeat scroll -250px 0px; white-space: nowrap; height: 70px; width: 50px; padding:10px 0 0; position: absolute; z-index: 3; overflow: hidden; top: 100px; left: 130px;}
 .nc-index-groupbuy dl dd.discount p, .nc-index-groupbuy dl dd.saveosts p { text-align:center; line-height: 20px; color: #333;}
-.nc-index-groupbuy dl dd.saveosts { font-size: 12px; line-height: 14px; color: #555; background: url(../images/nc_home_index.gif) no-repeat scroll -250px 0px; width: 50px; height: 70px; padding:10px 0 0; position: absolute; top: 100px; left: 182px; z-index: 3; overflow: hidden;}
+.nc-index-groupbuy dl dd.saveosts { font-size: 12px; line-height: 14px; color: #555; background: url(nc_home_index.gif) no-repeat scroll -250px 0px; width: 50px; height: 70px; padding:10px 0 0; position: absolute; top: 100px; left: 182px; z-index: 3; overflow: hidden;}
 .nc-index-groupbuy dl dd.time { width: 180px; height: 45px; position: absolute; z-index: 3; top: 195px; left: 6px;}
-.nc-index-groupbuy dl dd.time s { background: url(../images/index_bg.gif) no-repeat ; width: 160px; height: 16px; float: left;}
+.nc-index-groupbuy dl dd.time s { background: url(index_bg.gif) no-repeat ; width: 160px; height: 16px; float: left;}
 .nc-index-groupbuy dl dd.time s.not-publish { background-position: -210px -450px;}
 .nc-index-groupbuy dl dd.time s.cancel { background-position: -210px -480px;}
 .nc-index-groupbuy dl dd.time s.remain { background-position: -210px -510px;}
@@ -153,12 +153,12 @@
 .nc-home-pattern .rightbar .saletop-list li.top dl { width:150px; height:62px; position:relative; padding: 8px 0 8px 70px; overflow:hidden; display:block;}
 .nc-home-pattern .rightbar .saletop-list li.top dt.goods-name { line-height:16px; height:32px; width:160px; margin:2px 0 6px 0; overflow:hidden;}
 .nc-home-pattern .rightbar .saletop-list li.top dd.goods-pic { position:absolute; top:8px; left:0; width:60px; height:60px; border:solid 1px #F7F7F7;}
-.nc-home-pattern .rightbar .saletop-list li.top dd.goods-price { line-height: 20px; background: url(../images/rmb.gif) no-repeat scroll left center; display: inline-block; width: 60px; padding-left: 10px;}
+.nc-home-pattern .rightbar .saletop-list li.top dd.goods-price { line-height: 20px; background: url(rmb.gif) no-repeat scroll left center; display: inline-block; width: 60px; padding-left: 10px;}
 .nc-home-pattern .rightbar .saletop-list li.top dd.goods-price em { font-style:normal; font-size: 12px; font-family:Arial, Helvetica, sans-serif; color:#C00; font-weight:600;}
-.nc-home-pattern .rightbar .saletop-list li.top dd.nokey { font-family: Tahoma; font-size: 11px; font-weight:700; line-height: 16px; color: #FFF; background: url(../images/nc_home_index.gif) no-repeat scroll -310px 0px; text-align: center; width: 13px; height: 16px; padding-bottom: 5px; position: absolute; z-index: 99; overflow: hidden; top: 8px; left: 4px;}
+.nc-home-pattern .rightbar .saletop-list li.top dd.nokey { font-family: Tahoma; font-size: 11px; font-weight:700; line-height: 16px; color: #FFF; background: url(nc_home_index.gif) no-repeat scroll -310px 0px; text-align: center; width: 13px; height: 16px; padding-bottom: 5px; position: absolute; z-index: 99; overflow: hidden; top: 8px; left: 4px;}
 .nc-home-pattern .rightbar .saletop-list li.top dd.sales-volume { line-height: 20px; width:75px; display:inline-block;}
 .nc-home-pattern .rightbar .saletop-list li.normal {line-height:28px; width: 200px; height:28px; padding-left:24px; position:relative; z-index:1; }
-.nc-home-pattern .rightbar .saletop-list li.normal i { font-family: Tahoma; font-size: 11px; font-weight:700; line-height: 16px; color: #FFF; background: url(../images/nc_home_index.gif) no-repeat scroll -330px 0px; text-align: center; width: 13px; height: 16px; padding-bottom: 5px; position: absolute; z-index: 99; overflow: hidden; top: 4px; left: 4px; font-style:normal;}
+.nc-home-pattern .rightbar .saletop-list li.normal i { font-family: Tahoma; font-size: 11px; font-weight:700; line-height: 16px; color: #FFF; background: url(nc_home_index.gif) no-repeat scroll -330px 0px; text-align: center; width: 13px; height: 16px; padding-bottom: 5px; position: absolute; z-index: 99; overflow: hidden; top: 4px; left: 4px; font-style:normal;}
 .nc-home-pattern .rightbar .saletop-list li.normal a { display:block; line-height:28px; width: 190px; height:28px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
 .nc-home-pattern .rightbar .ad-banner { padding:10px;}
 

@@ -13,7 +13,7 @@
 <body>
 <div class="shop_hd_header">
     <div class="shop_hd_header_logo"><h1 class="logo"><a href="${pageContext.request.contextPath}/"><img
-            src="images/dingdang.png"
+            src="/res/user/images/dingdang.png"
             alt="DDang" width="180px" height="80px"/></a><span>ShopCZ</span></h1>
     </div>
 

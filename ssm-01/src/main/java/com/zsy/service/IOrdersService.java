@@ -17,4 +17,11 @@ public interface IOrdersService {
     List<OrderItem> findById(Integer orderId);
 
     Integer finishOrder(Integer orderId);
+
+    List<Orders> orderAll();
+
+    Integer sendOrder(Integer orderId);
+
+    Integer delOrder(Integer orderId);
+
 }

@@ -20,4 +20,10 @@ public interface IProductService {
     List<Product> findAll();
 
     Integer updateCom(Integer productId);
+
+    Integer proUpdate(Product product);
+
+    Integer proDel(Integer id);
+
+
 }

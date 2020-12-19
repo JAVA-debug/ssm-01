@@ -17,4 +17,7 @@ public interface ICommentService {
     Integer delComment(Integer id);
 
     Integer addComment(Comment comment);
+
+    List<Comment> commentAll();
+
 }

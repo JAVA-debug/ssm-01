@@ -17,6 +17,16 @@ public class Orders {
 
     private List<OrderItem> orderItems = new ArrayList<OrderItem>();
 
+    private Account account;
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
     public List<OrderItem> getOrderItems() {
         return orderItems;
     }

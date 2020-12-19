@@ -4,12 +4,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>个人中心</title>
-    <link rel="stylesheet" href="css/base.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_common.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_header.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_manager.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/topNav.js"></script>
+    <link rel="stylesheet" href="/res/user/css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_common.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_header.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_manager.css" type="text/css"/>
+    <script type="text/javascript" src="/res/user/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/res/user/js/topNav.js"></script>
 </head>
 <body>
 <!-- Header  -wll-2013/03/24 -->
@@ -87,7 +87,7 @@
                                     <tbody>
                                     <c:forEach items="${orders.orderItems}" var="orderItem">
                                         <tr>
-                                            <td class="dingdan_pic"><img src="${orderItem.imageUrl}"/></td>
+                                            <td class="dingdan_pic"><img src="/${orderItem.imageUrl}"/></td>
                                             <td class="dingdan_title">
                                                 <span><a href="">${orderItem.name}</a></span><br/>
                                             </td>

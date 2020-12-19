@@ -1,5 +1,7 @@
 package com.zsy.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Account {
@@ -10,6 +12,8 @@ public class Account {
     private String trueName;
     private Integer sex;
     private Integer status;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     public Integer getId() {

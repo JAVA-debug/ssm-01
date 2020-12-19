@@ -4,14 +4,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>购物车页面</title>
-	<link rel="stylesheet" href="css/base.css" type="text/css" />
-	<link rel="stylesheet" href="css/shop_common.css" type="text/css" />
-	<link rel="stylesheet" href="css/shop_header.css" type="text/css" />
-	<link rel="stylesheet" href="css/shop_gouwuche.css" type="text/css" />
-	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/topNav.js" ></script>
-<%--    <script type="text/javascript" src="js/jquery.goodnums.js" ></script>--%>
-<%--    <script type="text/javascript" src="js/shop_gouwuche.js" ></script>--%>
+	<link rel="stylesheet" href="/res/user/css/base.css" type="text/css" />
+	<link rel="stylesheet" href="/res/user/css/shop_common.css" type="text/css" />
+	<link rel="stylesheet" href="/res/user/css/shop_header.css" type="text/css" />
+	<link rel="stylesheet" href="/res/user/css/shop_gouwuche.css" type="text/css" />
+	<script type="text/javascript" src="/res/user/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/res/user/js/topNav.js" ></script>
+
 </head>
 <body>
 		<!-- Header  -wll-2013/03/24 -->
@@ -94,7 +93,7 @@
 							</span>
 						</td>
 						<td class="gwc_list_xiaoji"><span>￥<strong class="good_xiaojis">${accountCartList.money}</strong></span></td>
-						<td class="gwc_list_caozuo"><a href="javascript:void(0);" class="shop_good_delete" cid="${accountCartList.id}" id="delCartItem">删除</a></td>
+						<td class="gwc_list_caozuo"><a href="javascript:void(0);"  cid="${accountCartList.id}" class="delCartItem">删除</a></td>
 					</tr>
 					</c:forEach>
 				</tbody>
@@ -141,7 +140,7 @@
 <script>
 	$(document).ready(function () {
 
-		$("#delCartItem").click(function(){
+		$(".delCartItem").click(function(){
 			var cid = $(this).attr('cid');
 			var $this = $(this);
 			console.log(cid)

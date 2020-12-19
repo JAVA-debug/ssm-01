@@ -4,14 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>ShopCZ-首页</title>
-    <link rel="stylesheet" href="css/base.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_common.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_header.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_home.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/topNav.js"></script>
-    <script type="text/javascript" src="js/focus.js"></script>
-    <script type="text/javascript" src="js/shop_home_tab.js"></script>
+    <link rel="stylesheet" href="/res/user/css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_common.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_header.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_home.css" type="text/css"/>
+    <script type="text/javascript" src="/res/user/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/res/user/js/topNav.js"></script>
+    <script type="text/javascript" src="/res/user/js/focus.js"></script>
+    <script type="text/javascript" src="/res/user/js/shop_home_tab.js"></script>
 </head>
 
 <%--<script>--%>
@@ -600,40 +600,40 @@
                         <dl class=""></dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo1.jpg"></a></dt>
+                                    src="/res/user/images/lunbo1.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo2.jpg"></a></dt>
+                                    src="/res/user/images/lunbo2.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo3.jpg"></a></dt>
+                                    src="/res/user/images/lunbo3.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo4.jpg"></a></dt>
+                                    src="/res/user/images/lunbo4.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo5.jpg"></a></dt>
+                                    src="/res/user/images/lunbo5.jpg"></a></dt>
                         </dl>
 
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo6.jpg"></a></dt>
+                                    src="/res/user/images/lunbo6.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo7.jpg"></a></dt>
+                                    src="/res/user/images/lunbo7.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo8.jpg"></a></dt>
+                                    src="/res/user/images/lunbo8.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="images/lunbo9.jpg"></a></dt>
+                                    src="/res/user/images/lunbo9.jpg"></a></dt>
                         </dl>
                     </div>
                 </div>

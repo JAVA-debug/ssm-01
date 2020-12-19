@@ -4,14 +4,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>商品详细页面</title>
-    <link rel="stylesheet" href="css/base.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_common.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_header.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_list.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_goods.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/topNav.js"></script>
-    <script type="text/javascript" src="js/shop_goods.js"></script>
+    <link rel="stylesheet" href="/res/user/css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_common.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_header.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_list.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_goods.css" type="text/css"/>
+    <script type="text/javascript" src="/res/user/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/res/user/js/topNav.js"></script>
+    <script type="text/javascript" src="/res/user/js/shop_goods.js"></script>
 </head>
 <style>
     .comment_items .items_right {
@@ -82,36 +82,24 @@
         <div class="shop_goods_show_left">
             <!-- 京东商品展示 -->
             <link rel="stylesheet" href="css/shop_goodPic.css" type="text/css"/>
-            <script type="text/javascript" src="js/shop_goodPic_base.js"></script>
-            <script type="text/javascript" src="js/lib.js"></script>
-            <script type="text/javascript" src="js/163css.js"></script>
+            <script type="text/javascript" src="/res/user/js/shop_goodPic_base.js"></script>
+            <script type="text/javascript" src="/res/user/js/lib.js"></script>
+            <script type="text/javascript" src="/res/user/js/163css.js"></script>
             <div id="preview">
                 <div class=jqzoom id="spec-n1" onClick="window.open('/')"><IMG height="350" src="images/img04.jpg"
                                                                                jqimg="images/img04.jpg" width="350">
                 </div>
                 <div id="spec-n5">
                     <div class=control id="spec-left">
-                        <img src="images/left.gif"/>
+                        <img src="/res/user/images/left.gif"/>
                     </div>
                     <div id="spec-list">
                         <ul class="list-h">
 
-                            <li><img src="images/img01.jpg"></li>
-                            <li><img src="images/img02.jpg"></li>
-                            <li><img src="images/img03.jpg"></li>
-                            <li><img src="images/img04.jpg"></li>
-                            <li><img src="images/img01.jpg"></li>
-                            <li><img src="images/img02.jpg"></li>
-                            <li><img src="images/img03.jpg"></li>
-                            <li><img src="images/img04.jpg"></li>
-                            <li><img src="images/img01.jpg"></li>
-                            <li><img src="images/img02.jpg"></li>
-                            <li><img src="images/img03.jpg"></li>
-                            <li><img src="images/img04.jpg"></li>
                         </ul>
                     </div>
                     <div class=control id="spec-right">
-                        <img src="images/right.gif"/>
+                        <img src="/res/user/images/right.gif"/>
                     </div>
 
                 </div>
@@ -318,7 +306,7 @@
     <!-- Goods Left End -->
 
     <!-- 商品详情 -->
-    <script type="text/javascript" src="js/shop_goods_tab.js"></script>
+    <script type="text/javascript" src="/res/user/js/shop_goods_tab.js"></script>
     <div class="shop_goods_bd_xiangqing clearfix">
         <div class="shop_goods_bd_xiangqing_tab">
             <ul>

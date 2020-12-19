@@ -3,14 +3,14 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
     <title>用户登录</title>
-    <link rel="stylesheet" href="css/base.css"/>
-    <link rel="stylesheet" href="css/global.css"/>
-    <link rel="stylesheet" href="css/login-register.css"/>
+    <link rel="stylesheet" href="/res/user/css/base.css"/>
+    <link rel="stylesheet" href="/res/user/css/global.css"/>
+    <link rel="stylesheet" href="/res/user/css/login-register.css"/>
 
 </head>
 <body>
 <div class="header wrap1000">
-    <a href=""><img src="images/dingdang.png" alt="" width="180px" height="75px"/></a>
+    <a href=""><img src="/res/user/images/dingdang.png" alt="" width="180px" height="75px"/></a>
 </div>
 
 <div class="main">
@@ -61,7 +61,7 @@
     </div>
 
     <div class="login-form-left fl">
-        <img src="images/left.png" alt="" style="width: 450px;"/>
+        <img src="/res/user/images/left.png" alt="" style="width: 450px;"/>
     </div>
 </div>
 

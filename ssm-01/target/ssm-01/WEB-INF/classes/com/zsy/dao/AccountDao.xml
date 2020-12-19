@@ -27,4 +27,12 @@
     <update id="updatePwd">
         update account set password=#{newPwd} where id=#{userId}
     </update>
+
+    <update id="accUpdate">
+        update account set username = #{username},email = #{email},trueName = #{trueName},sex = #{sex} where id =#{id}
+    </update>
+
+    <delete id="delAcc">
+        delete from account where id = #{id}
+    </delete>
 </mapper>

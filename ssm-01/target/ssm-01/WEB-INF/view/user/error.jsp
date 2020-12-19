@@ -4,13 +4,13 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>错误提示页面</title>
-	<link rel="stylesheet" href="css/base.css" type="text/css" />
-	<link rel="stylesheet" href="css/shop_common.css" type="text/css" />
-	<link rel="stylesheet" href="css/shop_header.css" type="text/css" />
-	<link rel="stylesheet" href="css/shop_list.css" type="text/css" />
+	<link rel="stylesheet" href="/res/user/css/base.css" type="text/css" />
+	<link rel="stylesheet" href="/res/user/css/shop_common.css" type="text/css" />
+	<link rel="stylesheet" href="/res/user/css/shop_header.css" type="text/css" />
+	<link rel="stylesheet" href="/res/user/css/shop_list.css" type="text/css" />
 
-	<script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/topNav.js" ></script>
+	<script type="text/javascript" src="/res/user/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/res/user/js/topNav.js" ></script>
     <style type="text/css">
 		.shop_bd_error{width:1000px; height:50px; padding:100px 0; margin:10px auto 0; border:1px solid #ccc;}
 		.shop_bd_error p{height:45px; line-height:45px; width:980px; text-align: center; font-size:14px; font-weight: bold; color:#55556F;}

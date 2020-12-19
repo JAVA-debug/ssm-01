@@ -23,4 +23,10 @@ public interface AccountDao {
 //    修改密码
     Integer updatePwd(@Param("newPwd") String newPwd,@Param("userId") Integer userId);
 
+//    管理员修改用户信息
+    Integer accUpdate(Account account);
+
+//    管理员删除用户
+    Integer delAcc(Integer id);
+
 }

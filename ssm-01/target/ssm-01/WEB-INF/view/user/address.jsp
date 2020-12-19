@@ -4,13 +4,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>管理收货地址</title>
-    <link rel="stylesheet" href="css/base.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_common.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_header.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_manager.css" type="text/css"/>
-    <link rel="stylesheet" href="css/shop_shdz_835.css" type="text/css"/>
-    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/topNav.js"></script>
+    <link rel="stylesheet" href="/res/user/css/base.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_common.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_header.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_manager.css" type="text/css"/>
+    <link rel="stylesheet" href="/res/user/css/shop_shdz_835.css" type="text/css"/>
+    <script type="text/javascript" src="/res/user/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/res/user/js/topNav.js"></script>
 </head>
 <body>
 <!-- Header  -wll-2013/03/24 -->

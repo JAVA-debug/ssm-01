@@ -54,9 +54,21 @@ public class AccountServiceImpl implements IAccountService {
         return accountDao.updateAcc(userId,trueName,sex);
     }
 
+
+
     @Override
     public Integer updatePwd(String newPwd,Integer userId) {
         return accountDao.updatePwd(newPwd,userId);
+    }
+
+    @Override
+    public Integer accUpdate(Account account) {
+        return accountDao.accUpdate(account);
+    }
+
+    @Override
+    public Integer delAcc(Integer id) {
+        return accountDao.delAcc(id);
     }
 
 

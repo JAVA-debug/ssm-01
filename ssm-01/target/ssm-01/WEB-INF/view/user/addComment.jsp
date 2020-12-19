@@ -4,27 +4,13 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>评价管理</title>
-    <link rel="stylesheet" href="css/base.css" type="text/css" />
-    <link rel="stylesheet" href="css/shop_common.css" type="text/css" />
-    <link rel="stylesheet" href="css/shop_header.css" type="text/css" />
-    <link rel="stylesheet" href="css/shop_manager.css" type="text/css" />
-    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
-    <script type="text/javascript" src="js/topNav.js" ></script>
-    <style>
-        span.pingjia_type {
-            width: 24px;
-            height: 24px;
-            display: block;
-            margin: 0 auto;
-            float:left;
-        }
-        span.pingjia_type_2 {
-            background-position: 0 -30px;
-        }
-        span.pingjia_type_3 {
-            background-position: 0 -60px;
-        }
-    </style>
+    <link rel="stylesheet" href="/res/user/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="/res/user/css/shop_common.css" type="text/css" />
+    <link rel="stylesheet" href="/res/user/css/shop_header.css" type="text/css" />
+    <link rel="stylesheet" href="/res/user/css/shop_manager.css" type="text/css" />
+    <script type="text/javascript" src="/res/user/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="/res/user/js/topNav.js" ></script>
+
 </head>
 <body>
 <!-- Header  -wll-2013/03/24 -->
@@ -69,7 +55,7 @@
         <div class="shop_meber_bd_good_lists clearfix">
             <div class="title"><h3>商品评价</h3></div>
             <div class="clear"></div>
-            <dic class="shop_home_form">
+            <div class="shop_home_form">
                 <form action="/addComment" class="shop_form" method="post" onsubmit="return submitComment()">
                     <input type="hidden" name="productId" value="${commentGood.id}">
                     <ul>

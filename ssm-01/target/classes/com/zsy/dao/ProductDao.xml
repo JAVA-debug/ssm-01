@@ -37,4 +37,12 @@
     <update id="updateCom">
         update product set commentNum = commentNum + 1 WHERE id = #{productId}
     </update>
+
+    <update id="proUpdate">
+        update product set productCategoryId = #{productCategoryId},name = #{name},imageUrl = #{imageUrl},price = #{price},stock = #{stock} where id = #{id}
+    </update>
+
+    <delete id="proDel">
+        delete from product where id = #{id}
+    </delete>
 </mapper>

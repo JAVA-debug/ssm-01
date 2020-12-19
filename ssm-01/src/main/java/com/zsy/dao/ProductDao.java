@@ -29,4 +29,11 @@ public interface ProductDao {
 
 //    评论+1
     Integer updateCom(Integer productId);
+
+//    管理员更新商品
+    Integer proUpdate(Product product);
+
+//    管理员删除商品
+    Integer proDel(Integer id);
+
 }

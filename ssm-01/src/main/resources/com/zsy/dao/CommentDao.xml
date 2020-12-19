@@ -44,4 +44,12 @@
     <insert id="addComment" parameterType="comment">
         insert into comment(productId,userId,content,createTime) values(#{productId},#{userId},#{content},NOW())
     </insert>
+
+    <select id="commentAll" parameterType="Map" resultMap="commentResultMap">
+        select
+        a.id as a_id,a.username as a_username,
+        p.id as p_id,p.name as p_name,
+        c.id as c_id,c.productId as c_productId,c.userId as c_userId,c.content as c_content,c.createTime as c_createTime
+        from comment c,product p,account a where c.productId = p.id and c.userId = a.id
+    </select>
 </mapper>

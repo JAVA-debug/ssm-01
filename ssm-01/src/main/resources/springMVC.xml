@@ -23,9 +23,13 @@
         <mvc:interceptors>
             <mvc:interceptor>
                 <mvc:mapping path="/**"/>
-                <mvc:exclude-mapping path="/images/**"/>
-                <mvc:exclude-mapping path="/css/**"/>
-                <mvc:exclude-mapping path="/js/**"/>
+                <mvc:exclude-mapping path="/res/user/images/**"/>
+                <mvc:exclude-mapping path="/res/user/css/**"/>
+                <mvc:exclude-mapping path="/res/user/js/**"/>
+                <mvc:exclude-mapping path="/res/admin/css/**"/>
+                <mvc:exclude-mapping path="/res/admin/img/**"/>
+                <mvc:exclude-mapping path="/res/admin/js/**"/>
+                <mvc:exclude-mapping path="/admin/**"/>
                 <bean class="com.zsy.interceptor.PremissInterceprot"/>
             </mvc:interceptor>
         </mvc:interceptors>

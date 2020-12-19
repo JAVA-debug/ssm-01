@@ -28,4 +28,16 @@ public interface OrdersDao {
 
 //    完成收货
     Integer finishOrder(Integer orderId);
+
+//    管理员查看所有订单
+    List<Orders> orderAll();
+
+//    管理员更新订单为已发货
+    Integer sendOrder(Integer orderId);
+
+//    管理员删除订单
+    Integer delOrder(Integer orderId);
+
+//    要先删除order_item的数据之后才能删除order
+    Integer delOrderItem(Integer orderId);
 }

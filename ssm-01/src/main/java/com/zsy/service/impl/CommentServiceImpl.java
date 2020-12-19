@@ -39,4 +39,11 @@ public class CommentServiceImpl implements ICommentService {
     public Integer addComment(Comment comment) {
         return commentDao.addComment(comment);
     }
+
+    @Override
+    public List<Comment> commentAll() {
+        return commentDao.commentAll();
+    }
+
+
 }
