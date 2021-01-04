@@ -15,7 +15,7 @@
     <div class="right">
         <div class="location">
             <strong>你现在所在的位置是:</strong>
-            <span>账单管理页面 >> 订单添加页面</span>
+            <span>用户管理页面 >> 用户修改页面</span>
         </div>
         <div class="providerAdd">
             <form action="accUpdate" method="post">

@@ -6,15 +6,26 @@ public class Product {
     private Integer id;
     private Integer productCategoryId;
     private String name;
-    private String tags;
+    private String title;
+    private String author;
+    private String publisher;
     private String imageUrl;
+    private String imageMid;
     private String imageBig;
     private Float price;
     private Integer stock;
     private Integer sellNum;
-    private Integer viewNum;
+    private Integer status;
     private Integer commentNum;
     private Date createTime;
+
+    public String getImageMid() {
+        return imageMid;
+    }
+
+    public void setImageMid(String imageMid) {
+        this.imageMid = imageMid;
+    }
 
     public Integer getId() {
         return id;
@@ -40,12 +51,28 @@ public class Product {
         this.name = name;
     }
 
-    public String getTags() {
-        return tags;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTags(String tags) {
-        this.tags = tags;
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 
     public String getImageUrl() {
@@ -80,14 +107,6 @@ public class Product {
         this.sellNum = sellNum;
     }
 
-    public Integer getViewNum() {
-        return viewNum;
-    }
-
-    public void setViewNum(Integer viewNum) {
-        this.viewNum = viewNum;
-    }
-
     public Integer getCommentNum() {
         return commentNum;
     }
@@ -112,19 +131,26 @@ public class Product {
         this.imageBig = imageBig;
     }
 
+    public Integer getStatus() {
+        return status;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
                 ", productCategoryId=" + productCategoryId +
                 ", name='" + name + '\'' +
-                ", tags='" + tags + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", imageBig='" + imageBig + '\'' +
                 ", price=" + price +
                 ", stock=" + stock +
                 ", sellNum=" + sellNum +
-                ", viewNum=" + viewNum +
+                ", viewNum=" + status +
                 ", commentNum=" + commentNum +
                 ", createTime=" + createTime +
                 '}';

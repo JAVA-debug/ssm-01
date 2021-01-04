@@ -17,12 +17,12 @@
             <strong>你现在所在的位置是:</strong>
             <span>商品管理</span>
         </div>
-        <div class="search">
-            <span>供应商名称：</span>
-            <input type="text" placeholder="请输入供应商的名称"/>
-            <input type="button" value="查询"/>
-            <a href="providerAdd.html">添加供应商</a>
-        </div>
+<%--        <div class="search">--%>
+<%--            <span>供应商名称：</span>--%>
+<%--            <input type="text" placeholder="请输入供应商的名称"/>--%>
+<%--            <input type="button" value="查询"/>--%>
+<%--            <a href="providerAdd.html">添加供应商</a>--%>
+<%--        </div>--%>
         <!--供应商操作表格-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
@@ -39,12 +39,18 @@
                 <tr>
                     <td>${pro.id}</td>
                     <td>${pro.name}</td>
-                    <td><img src="/${pro.imageUrl}" style="width: 100px;height: 100px"></td>
+                    <td><img src="${pro.imageUrl}" style="width: 100px;height: 100px"></td>
                     <td>${pro.price}</td>
                     <td>${pro.stock}</td>
                     <td>${pro.sellNum}</td>
                     <td>${pro.commentNum}</td>
                     <td>
+                        <c:if test="${pro.status == 0}">
+                            <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">上架</a></button>
+                        </c:if>
+                        <c:if test="${pro.status == 1}">
+                            <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">下架</a></button>
+                        </c:if>
                         <a href="${ctx}/admin/product/proInfo?id=${pro.id}"><img src="/res/admin/img/read.png" alt="查看" title="查看"/></a>
                         <a href="${ctx}/admin/product/toUpdate?id=${pro.id}"><img src="/res/admin/img/xiugai.png" alt="修改" title="修改"/></a>
                         <a href="${ctx}/admin/product/proDel?id=${pro.id}" class="removeProvider"><img src="/res/admin/img/schu.png" alt="删除" title="删除"/></a>

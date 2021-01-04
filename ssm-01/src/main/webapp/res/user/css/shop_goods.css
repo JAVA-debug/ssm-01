@@ -3,10 +3,10 @@
 /* Goods CSS */
 .shop_goods_bd{width:1000px; margin:10px auto 10px;}
 
-.shop_goods_show{width:1000px; height:420px;}
+.shop_goods_show{width:1000px; height:420px;margin-top: 30px}
 .shop_goods_show_left{float:left; width:350px; margin-right:10px;}
 
-.shop_goods_show_right{float:left; width:630px; position:relative; top:-21px; }
+.shop_goods_show_right{float:left; width:630px; position:relative; top:-21px; left: 35px}
 .shop_goods_show_right ul{width:600px; padding:10px;}
 .shop_goods_show_right ul li{padding:0px 0; height:65px; line-height: 40px;}
 .shop_goods_show_right ul li label{width:100px; padding-right: 10px; text-align: right; float:left; height:40px; line-height:40px;}

@@ -14,36 +14,6 @@
     <script type="text/javascript" src="/res/user/js/shop_home_tab.js"></script>
 </head>
 
-<%--<script>--%>
-<%--    $(document).ready(--%>
-<%--        $.get("/special", {"start": 12, "end": 17}, function (data) {--%>
-
-<%--            var uls = '<ul>'--%>
-<%--            for (var i = 0; i < data.length; i++) {--%>
-<%--                var li = '<li><dt><a href="/novel" title="' + data[i].name + '"><img src="' + data[i].imageUrl + '"/></a></dt>' +--%>
-<%--                    '<dd><a href="#" title="' + data[i].name + '">' + data[i].name + '</a></dd>' +--%>
-<%--                    '<dd>¥:<em>' + data[i].price + '</em></dd></li>'--%>
-<%--                uls += li--%>
-<%--            }--%>
-<%--            uls += '</ul>'--%>
-<%--            $("#product").html(uls)--%>
-<%--        }),--%>
-
-<%--        $.get("/limit2", {}, function (data) {--%>
-
-<%--            var uls = '<ul>'--%>
-<%--            for (var i = 0; i < data.length; i++) {--%>
-<%--                var li = '<li><dt><a href="#" title="' + data[i].name + '"><img src="' + data[i].imageUrl + '"/></a></dt>' +--%>
-<%--                    '<dl><dd><a href="#" title="' + data[i].name + '">' + data[i].name + '</a></dd>' +--%>
-<%--                    '<dd>¥:<em>' + data[i].price + '</em></dd></dl></li>'--%>
-<%--                uls += li--%>
-<%--            }--%>
-<%--            uls += '</ul>'--%>
-<%--            $("#limit2").html(uls)--%>
-<%--        })--%>
-<%--    )--%>
-<%--</script>--%>
-
 <body>
 <!-- Header  -wll-2013/03/24 -->
 <div class="shop_hd">
@@ -174,10 +144,6 @@
                             <dl class="clearfix">
                                 <dt><a href="美容" href="">经济</a></dt>
                                 <dd>
-                                    <a href="">大众经济读物</a>
-                                    <a href="">经济理论、法规</a>
-                                    <a href="">商业贸易</a>
-                                    <a href="">WTO</a>
                                     <a href="">财政金融</a>
                                     <a href="">统计</a>
                                     <a href="">经济考试</a>
@@ -281,7 +247,7 @@
                         <h3><a href="" title="行业 职业">行业 职业</a></h3>
                         <div class="cat_menu clearfix" style="">
                             <dl class="clearfix">
-                                <dt><a href="美容" href="">计算机/网络</a></dt>
+                                <dt><a href="#" href="">计算机/网络</a></dt>
                                 <dd>
                                     <a href="">编程语言</a>
                                     <a href="">数据库</a>
@@ -338,6 +304,17 @@
                                 </dd>
                             </dl>
 
+                            <dl class="clearfix">
+                                <dt><a href="" href="">自然科学</a></dt>
+                                <dd>
+                                    <a href="">航天</a>
+                                    <a href="">地震</a>
+                                    <a href="">光学</a>
+                                    <a href="">天文学</a>
+                                    <a href="">气象</a>
+                                    <a href="">学术专著</a>
+                                </dd>
+                            </dl>
                             <dl class="clearfix">
                                 <dt><a href="法律" href="">法律</a></dt>
                                 <dd>
@@ -477,86 +454,6 @@
                             </dl>
                         </div>
                     </li>
-                    <li id="cat_7" class="">
-                        <h3><a href="" title="美容美妆">美容美妆</a></h3>
-                        <div class="cat_menu clearfix" style="">
-                            <dl class="clearfix">
-                                <dt><a href="美容" href="">美容</a></dt>
-                                <dd>
-                                    <a href="">风衣</a>
-                                    <a href="">长袖连衣裙</a>
-                                    <a href="">毛呢连衣裙</a>
-                                    <a href="">半身裙</a>
-                                    <a href="">小脚裤</a>
-                                    <a href="">加绒打底裤</a>
-                                    <a href="">牛仔裤</a>
-                                    <a href="">打底衫</a>
-                                    <a href="">情侣装</a>
-                                    <a href="">棉衣</a>
-                                    <a href="">毛呢大衣</a>
-                                    <a href="">毛呢短裤</a>
-                                </dd>
-                            </dl>
-
-                            <dl class="clearfix">
-                                <dt><a href="美妆" href="">美妆</a></dt>
-                                <dd>
-                                    <a href="">风衣</a>
-                                    <a href="">长袖连衣裙</a>
-                                    <a href="">毛呢连衣裙</a>
-                                    <a href="">半身裙</a>
-                                    <a href="">小脚裤</a>
-                                    <a href="">加绒打底裤</a>
-                                    <a href="">牛仔裤</a>
-                                    <a href="">打底衫</a>
-                                    <a href="">情侣装</a>
-                                    <a href="">棉衣</a>
-                                    <a href="">毛呢大衣</a>
-                                    <a href="">毛呢短裤</a>
-                                </dd>
-                            </dl>
-                        </div>
-                    </li>
-                    <li id="cat_8" class="">
-                        <h3><a href="" title="美容美妆">美容美妆</a></h3>
-                        <div class="cat_menu clearfix" style="">
-                            <dl class="clearfix">
-                                <dt><a href="美容" href="">美容</a></dt>
-                                <dd>
-                                    <a href="">风衣</a>
-                                    <a href="">长袖连衣裙</a>
-                                    <a href="">毛呢连衣裙</a>
-                                    <a href="">半身裙</a>
-                                    <a href="">小脚裤</a>
-                                    <a href="">加绒打底裤</a>
-                                    <a href="">牛仔裤</a>
-                                    <a href="">打底衫</a>
-                                    <a href="">情侣装</a>
-                                    <a href="">棉衣</a>
-                                    <a href="">毛呢大衣</a>
-                                    <a href="">毛呢短裤</a>
-                                </dd>
-                            </dl>
-
-                            <dl class="clearfix">
-                                <dt><a href="美妆" href="">美妆</a></dt>
-                                <dd>
-                                    <a href="">风衣</a>
-                                    <a href="">长袖连衣裙</a>
-                                    <a href="">毛呢连衣裙</a>
-                                    <a href="">半身裙</a>
-                                    <a href="">小脚裤</a>
-                                    <a href="">加绒打底裤</a>
-                                    <a href="">牛仔裤</a>
-                                    <a href="">打底衫</a>
-                                    <a href="">情侣装</a>
-                                    <a href="">棉衣</a>
-                                    <a href="">毛呢大衣</a>
-                                    <a href="">毛呢短裤</a>
-                                </dd>
-                            </dl>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -600,46 +497,45 @@
                         <dl class=""></dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo1.jpg"></a></dt>
+                                    src="http://img60.ddimg.cn/upload_img/00796/xssd202012/750x315-1606716842.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo2.jpg"></a></dt>
+                                    src="http://img55.ddimg.cn/9002880132976055.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo3.jpg"></a></dt>
+                                    src="http://img52.ddimg.cn/9002560192500872.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo4.jpg"></a></dt>
+                                    src="http://img54.ddimg.cn/9007640103904514.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo5.jpg"></a></dt>
+                                    src="http://img61.ddimg.cn/topic_img/gys_0015115/2020.12.17xxzy750x315.jpg"></a></dt>
                         </dl>
 
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo6.jpg"></a></dt>
+                                    src="http://img56.ddimg.cn/9003320164295226.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo7.jpg"></a></dt>
+                                    src="http://img53.ddimg.cn/9002800095391213.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo8.jpg"></a></dt>
+                                    src="http://img57.ddimg.cn/9003260188051247.jpg"></a></dt>
                         </dl>
                         <dl class="">
                             <dt><a href="#" title=""><img
-                                    src="/res/user/images/lunbo9.jpg"></a></dt>
+                                    src="http://img61.ddimg.cn/upload_img/00821/1206/750-315-1608292170.jpg"></a></dt>
                         </dl>
                     </div>
                 </div>
             </div>
             <script type="text/javascript">movec();</script>
-
         </div>
 
         <!-- 右侧 -->
@@ -647,24 +543,28 @@
 
             <div class="shop_bd_top_right-style1 nc-home-news">
                 <ul class="tabs-nav">
-                    <li><a href="javascript:void(0);" class="hover">商城公告</a></li>
-
+                    <li><a href="javascript:void(0);" class="hover">最新动态</a></li>
                 </ul>
                 <div class="clear"></div>
                 <div class="tabs-panel">
                     <ul class="list-style01">
-                        <li><a title="如何申请开店" href="article-15.html">如何申请开店</a><span>(2011-01-11)</span></li>
-                        <li><a title="商城商品推荐" href="article-14.html">商城商品推荐</a><span>(2011-01-11)</span></li>
-                        <li><a title="如何发货" href="article-13.html">如何发货</a><span>(2011-01-11)</span></li>
-                        <li><a title="查看售出商品" href="article-12.html">查看售出商品</a><span>(2011-01-11)</span></li>
-                        <li><a title="如何管理店铺" href="article-11.html">如何管理店铺</a><span>(2011-01-11)</span></li>
-                        <li><a title="如何申请开店" href="article-15.html">如何申请开店</a><span>(2011-01-11)</span></li>
-                        <li><a title="商城商品推荐" href="article-14.html">商城商品推荐</a><span>(2011-01-11)</span></li>
-                        <li><a title="如何发货" href="article-13.html">如何发货</a><span>(2011-01-11)</span></li>
-                        <li><a title="查看售出商品" href="article-12.html">查看售出商品</a><span>(2011-01-11)</span></li>
-                        <li><a title="如何管理店铺" href="article-11.html">如何管理店铺</a><span>(2011-01-11)</span></li>
+                        <li><a title="童书，每满100减50" href="#">童书，每满100减50</a></li>
+                        <li><a title="悦小说品文学，每满100减50" href="#">悦小说品文学，每满100减50</a></li>
+                        <li><a title="青春动漫，励志人生，每满100减50" href="#">青春动漫，励志人生，每满100减50</a></li>
+                    </ul>
+                </div>
 
-
+            </div>
+            <div class="shop_bd_top_right-style1 nc-home-news">
+                <ul class="tabs-nav">
+                    <li><a href="" class="hover">新书</a></li>
+                </ul>
+                <div class="clear"></div>
+                <div class="tabs-panel">
+                    <ul class="list-style01">
+                        <li><a title="童书，每满100减50" href="#">童书，每满100减50</a></li>
+                        <li><a title="悦小说品文学，每满100减50" href="#">悦小说品文学，每满100减50</a></li>
+                        <li><a title="青春动漫，励志人生，每满100减50" href="#">青春动漫，励志人生，每满100减50</a></li>
                     </ul>
                 </div>
             </div>
@@ -684,21 +584,8 @@
 <!-- Body End -->
 
 <!-- Footer - wll - 2013/3/24 -->
-<div class="clear"></div>
-<div class="shop_footer">
-    <div class="shop_footer_link">
-        <p>
-            <a href="">首页</a>|
-            <a href="">招聘英才</a>|
-            <a href="">广告合作</a>|
-            <a href="">关于ShopCZ</a>|
-            <a href="">关于我们</a>
-        </p>
-    </div>
-    <div class="shop_footer_copy">
-        <p>Copyright 2004-2013 itcast Inc.,All rights reserved.</p>
-    </div>
-</div>
+<c:import url="module/footer.jsp"></c:import>
+
 <!-- Footer End -->
 </body>
 </html>

@@ -17,7 +17,7 @@ public class AdminController {
     @Autowired
     private IUserService userService;
 
-    @RequestMapping("/")
+    @RequestMapping(value = {"/",""})
     public String index(){
         return "admin/index";
     }

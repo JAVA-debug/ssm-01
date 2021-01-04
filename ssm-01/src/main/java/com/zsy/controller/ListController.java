@@ -27,7 +27,7 @@ public class ListController {
 
     @RequestMapping("/novel")
     public String HotSell(Integer id, Model model,@RequestParam(defaultValue = "1")Integer pageNum){
-        PageHelper.startPage(pageNum,5);
+        PageHelper.startPage(pageNum,8);
         List<Product> novel = productService.novel(id);
         PageInfo<Product> info = new PageInfo<Product>(novel);
         model.addAttribute("id",id);

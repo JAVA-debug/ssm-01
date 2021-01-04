@@ -31,6 +31,11 @@ public class ProductServiceImpl implements IProductService {
     }
 
     @Override
+    public List<Product> indexCate(Integer id) {
+        return productDao.indexCate(id);
+    }
+
+    @Override
     public Product good(Integer id) {
         return productDao.good(id);
     }
@@ -63,6 +68,15 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public Integer proDel(Integer id) {
         return productDao.proDel(id);
+    }
+
+    @Override
+    public Integer changeProStatus(Integer id) {
+        Product good = productDao.good(id);
+        if (good.getStatus() == 1){
+            return productDao.proDown(id);
+        }
+        return productDao.proUp(id);
     }
 
 

@@ -18,27 +18,27 @@
             <strong>你现在所在的位置是:</strong>
             <span>用户管理</span>
         </div>
-        <div class="search">
-            <span>商品名称：</span>
-            <input type="text" placeholder="请输入商品的名称"/>
+<%--        <div class="search">--%>
+<%--            <span>商品名称：</span>--%>
+<%--            <input type="text" placeholder="请输入商品的名称"/>--%>
 
-            <span>供应商：</span>
-            <select name="tigong">
-                <option value="">--请选择--</option>
-                <option value="">北京市粮油总公司</option>
-                <option value="">邯郸市五得利面粉厂</option>
-            </select>
+<%--            <span>供应商：</span>--%>
+<%--            <select name="tigong">--%>
+<%--                <option value="">--请选择--</option>--%>
+<%--                <option value="">北京市粮油总公司</option>--%>
+<%--                <option value="">邯郸市五得利面粉厂</option>--%>
+<%--            </select>--%>
 
-            <span>是否付款：</span>
-            <select name="fukuan">
-                <option value="">--请选择--</option>
-                <option value="">已付款</option>
-                <option value="">未付款</option>
-            </select>
+<%--            <span>是否付款：</span>--%>
+<%--            <select name="fukuan">--%>
+<%--                <option value="">--请选择--</option>--%>
+<%--                <option value="">已付款</option>--%>
+<%--                <option value="">未付款</option>--%>
+<%--            </select>--%>
 
-            <input type="button" value="查询"/>
-            <a href="billAdd.html">添加订单</a>
-        </div>
+<%--            <input type="button" value="查询"/>--%>
+<%--            <a href="billAdd.html">添加订单</a>--%>
+<%--        </div>--%>
         <!--账单表格 样式和供应商公用-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">

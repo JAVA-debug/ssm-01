@@ -18,11 +18,6 @@
     </div>
 
     <div class="shop_hd_header_search">
-        <ul class="shop_hd_header_search_tab">
-            <li id="search" class="current">商品</li>
-
-        </ul>
-        <div class="clear"></div>
         <div class="search_form">
             <form method="post" action="/search">
                 <div class="search_formstyle">

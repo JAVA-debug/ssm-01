@@ -17,12 +17,12 @@
                 <strong>你现在所在的位置是:</strong>
                 <span>订单管理页面</span>
             </div>
-            <div class="search">
-                <span>用户名：</span>
-                <input type="text" placeholder="请输入用户名"/>
-                <input type="button" value="查询"/>
-                <a href="userAdd.html">添加用户</a>
-            </div>
+<%--            <div class="search">--%>
+<%--                <span>用户名：</span>--%>
+<%--                <input type="text" placeholder="请输入用户名"/>--%>
+<%--                <input type="button" value="查询"/>--%>
+<%--                <a href="userAdd.html">添加用户</a>--%>
+<%--            </div>--%>
             <!--用户-->
             <table class="providerTable" cellpadding="0" cellspacing="0">
                 <tr class="firstTr">

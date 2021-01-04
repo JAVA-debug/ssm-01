@@ -16,6 +16,8 @@ public interface ProductDao {
 //    分类
     List<Product> novel(Integer id);
 
+//    首页小分类
+    List<Product> indexCate(Integer id);
 //    详情
     Product good(Integer id);
 
@@ -35,5 +37,10 @@ public interface ProductDao {
 
 //    管理员删除商品
     Integer proDel(Integer id);
+
+//    管理员设置上下架
+    Integer proUp(Integer id);
+    Integer proDown(Integer id);
+
 
 }

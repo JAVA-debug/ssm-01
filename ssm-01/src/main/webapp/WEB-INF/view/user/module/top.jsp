@@ -16,17 +16,17 @@
 <div class="shop_hd_topNav">
     <div class="shop_hd_topNav_all">
         <!-- Header TopNav Left -->
-        <div class="shop_hd_topNav_all_left">
+<%--        <div class="shop_hd_topNav_all_left">--%>
 
-            <c:if test="${!empty account}">
-                <p style="color:blue;">欢迎， ${account.username}</p>
-            </c:if>
-            <c:if test="${empty account}">
-                <p>您好，欢迎来到<b><a href="/">叮当书城</a></b>[<a href="${pageContext.request.contextPath}/login">登录</a>][<a
-                        href="${pageContext.request.contextPath}/regist">注册</a>]</p>
+<%--            <c:if test="${!empty account}">--%>
+<%--                <p style="color:blue;">欢迎， ${account.username}</p>--%>
+<%--            </c:if>--%>
+<%--            <c:if test="${empty account}">--%>
+<%--                <p>您好，欢迎来到<b><a href="/">叮当书城</a></b>[<a href="${pageContext.request.contextPath}/login">登录</a>][<a--%>
+<%--                        href="${pageContext.request.contextPath}/regist">注册</a>]</p>--%>
 
-            </c:if>
-        </div>
+<%--            </c:if>--%>
+<%--        </div>--%>
         <!-- Header TopNav Left End -->
 
         <!-- Header TopNav Right -->
@@ -35,13 +35,19 @@
 
                 <li>
                     <div class="topNav_menu">
-                        <a href="${pageContext.request.contextPath}/order?userId=${account.id}" class="topNavHover">我的商城<i></i></a>
-                        <div class="topNav_menu_bd" style="display:none;">
-                            <ul>
-                                <li><a title="已买到的商品" target="_top" href="#">已买到的商品</a></li>
-                                <li><a title="个人主页" target="_top" href="#">个人主页</a></li>
-                            </ul>
-                        </div>
+                        <c:if test="${!empty account}">
+                            <p style="color:blue;">欢迎， ${account.username}</p>
+                        </c:if>
+                        <c:if test="${empty account}">
+                            <p>您好，欢迎来到<b><a href="/">叮当书城</a></b>[<a href="${pageContext.request.contextPath}/login">登录</a>][<a
+                                    href="${pageContext.request.contextPath}/regist">注册</a>]</p>
+
+                        </c:if>
+                    </div>
+                </li>
+                <li>
+                    <div class="topNav_menu">
+                        <a href="${pageContext.request.contextPath}/order?userId=${account.id}" class="topNavHover">我的商城</a>
                     </div>
                 </li>
                 <li>
@@ -52,22 +58,14 @@
                         <c:if test="${empty account}">
                             <a href="" class="topNavHover" id="total">购物车</a>
                         </c:if>
-
                     </div>
                 </li>
 
                 <li>
                     <div class="topNav_menu">
-                        <a href="#" class="topNavHover">我的收藏<i></i></a>
-                        <div class="topNav_menu_bd" style="display:none;">
-                            <ul>
-                                <li><a title="收藏的商品" target="_top" href="#">收藏的商品</a></li>
-                                <li><a title="收藏的店铺" target="_top" href="#">收藏的店铺</a></li>
-                            </ul>
-                        </div>
+                        <a href="#" class="topNavHover">我的收藏</a>
                     </div>
                 </li>
-
             </ul>
         </div>
         <!-- Header TopNav Right End -->

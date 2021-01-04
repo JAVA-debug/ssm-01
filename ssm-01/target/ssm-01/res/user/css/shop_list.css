@@ -9,7 +9,7 @@
  .shop_bd{width:1000px; margin: 10px auto 0;}
 
  /* List Body Left */
- .shop_bd_list_left{width:210px; float:left; }
+ .shop_bd_list_left{width:210px; float:left;}
  .shop_bd_list_bk{width:195px; border:1px solid #D8D8D8; padding:5px; margin-bottom: 10px; margin-right:10px;}
  .shop_bd_list_bk div.title{width:190px; font-size:14px; font-weight: bold; padding-left:5px; color:#3E3E3E; line-height: 33px; height:33px; border-bottom: 1px solid #E7E7E7;}
  .shop_bd_list_bk div.contents{width:175px; padding:10px 10px 10px;}

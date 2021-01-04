@@ -266,21 +266,8 @@
 <!-- 购物车 Body End -->
 
 <!-- Footer - wll - 2013/3/24 -->
-<div class="clear"></div>
-<div class="shop_footer">
-    <div class="shop_footer_link">
-        <p>
-            <a href="">首页</a>|
-            <a href="">招聘英才</a>|
-            <a href="">广告合作</a>|
-            <a href="">关于ShopCZ</a>|
-            <a href="">关于我们</a>
-        </p>
-    </div>
-    <div class="shop_footer_copy">
-        <p>Copyright 2007-2013 ShopCZ Inc.,All rights reserved.<br/>d by ShopCZ 2.4 </p>
-    </div>
-</div>
+<c:import url="module/footer.jsp"></c:import>
+
 <!-- Footer End -->
 
 </body>

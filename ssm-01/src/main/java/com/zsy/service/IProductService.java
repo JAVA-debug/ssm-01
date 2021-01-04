@@ -11,6 +11,8 @@ public interface IProductService {
 
     List<Product> novel(Integer id);
 
+    List<Product> indexCate(Integer id);
+
     Product good(Integer id);
 
     Integer updatePro(Product product);
@@ -24,6 +26,8 @@ public interface IProductService {
     Integer proUpdate(Product product);
 
     Integer proDel(Integer id);
+
+    Integer changeProStatus(Integer id);
 
 
 }

@@ -19,7 +19,7 @@
 
     <mvc:default-servlet-handler/>
 
-    <!--拦截器-->
+<!--    拦截器-->
         <mvc:interceptors>
             <mvc:interceptor>
                 <mvc:mapping path="/**"/>
@@ -29,7 +29,6 @@
                 <mvc:exclude-mapping path="/res/admin/css/**"/>
                 <mvc:exclude-mapping path="/res/admin/img/**"/>
                 <mvc:exclude-mapping path="/res/admin/js/**"/>
-                <mvc:exclude-mapping path="/admin/**"/>
                 <bean class="com.zsy.interceptor.PremissInterceprot"/>
             </mvc:interceptor>
         </mvc:interceptors>

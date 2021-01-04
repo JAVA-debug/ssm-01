@@ -79,36 +79,36 @@
 
         <!-- 显示菜单 -->
         <div class="sort-bar">
-            <div class="bar-l">
-                <!-- 查看方式S -->
-                <!-- 查看方式E -->
-                <!-- 排序方式S -->
-                <ul class="array">
-                    <li class="selected"><a title="默认排序" onclick="javascript:dropParam(['key','order'],'','array');"
-                                            class="nobg" href="javascript:void(0)">默认</a></li>
-                    <li><a title="点击按销量从高到低排序"
-                           onclick="javascript:replaceParam(['key','order'],['sales','desc'],'array');"
-                           href="javascript:void(0)">销量</a></li>
-                    <li><a title="点击按人气从高到低排序"
-                           onclick="javascript:replaceParam(['key','order'],['click','desc'],'array');"
-                           href="javascript:void(0)">人气</a></li>
-                    <li><a title="点击按信用从高到低排序"
-                           onclick="javascript:replaceParam(['key','order'],['credit','desc'],'array');"
-                           href="javascript:void(0)">信用</a></li>
-                    <li><a title="点击按价格从高到低排序"
-                           onclick="javascript:replaceParam(['key','order'],['price','desc'],'array');"
-                           href="javascript:void(0)">价格</a></li>
-                </ul>
-                <!-- 排序方式E -->
-                <!-- 价格段S -->
-                <div class="prices"><em>¥</em>
-                    <input type="text" value="" class="w30">
-                    <em>-</em>
-                    <input type="text" value="" class="w30">
-                    <input type="submit" value="确认" id="search_by_price">
-                </div>
-                <!-- 价格段E -->
-            </div>
+<%--            <div class="bar-l">--%>
+<%--                <!-- 查看方式S -->--%>
+<%--                <!-- 查看方式E -->--%>
+<%--                <!-- 排序方式S -->--%>
+<%--                <ul class="array">--%>
+<%--                    <li class="selected"><a title="默认排序" onclick="javascript:dropParam(['key','order'],'','array');"--%>
+<%--                                            class="nobg" href="javascript:void(0)">默认</a></li>--%>
+<%--                    <li><a title="点击按销量从高到低排序"--%>
+<%--                           onclick="javascript:replaceParam(['key','order'],['sales','desc'],'array');"--%>
+<%--                           href="javascript:void(0)">销量</a></li>--%>
+<%--                    <li><a title="点击按人气从高到低排序"--%>
+<%--                           onclick="javascript:replaceParam(['key','order'],['click','desc'],'array');"--%>
+<%--                           href="javascript:void(0)">人气</a></li>--%>
+<%--                    <li><a title="点击按信用从高到低排序"--%>
+<%--                           onclick="javascript:replaceParam(['key','order'],['credit','desc'],'array');"--%>
+<%--                           href="javascript:void(0)">信用</a></li>--%>
+<%--                    <li><a title="点击按价格从高到低排序"--%>
+<%--                           onclick="javascript:replaceParam(['key','order'],['price','desc'],'array');"--%>
+<%--                           href="javascript:void(0)">价格</a></li>--%>
+<%--                </ul>--%>
+<%--                <!-- 排序方式E -->--%>
+<%--                <!-- 价格段S -->--%>
+<%--                <div class="prices"><em>¥</em>--%>
+<%--                    <input type="text" value="" class="w30">--%>
+<%--                    <em>-</em>--%>
+<%--                    <input type="text" value="" class="w30">--%>
+<%--                    <input type="submit" value="确认" id="search_by_price">--%>
+<%--                </div>--%>
+<%--                <!-- 价格段E -->--%>
+<%--            </div>--%>
         </div>
         <div class="clear"></div>
         <!-- 显示菜单 End -->
@@ -170,23 +170,12 @@
 <!-- List Body End -->
 
 <!-- Footer - wll - 2013/3/24 -->
-<div class="clear"></div>
-<div class="shop_footer">
-    <div class="shop_footer_link">
-        <p>
-            <a href="">首页</a>|
-            <a href="">招聘英才</a>|
-            <a href="">广告合作</a>|
-            <a href="">关于ShopCZ</a>|
-            <a href="">关于我们</a>
-        </p>
-    </div>
-    <div class="shop_footer_copy">
-        <p>Copyright 2004-2013 itcast Inc.,All rights reserved.</p>
-    </div>
-</div>
+<c:import url="module/footer.jsp"></c:import>
+
 <!-- Footer End -->
 
 </body>
+<script>
 
+</script>
 </html>

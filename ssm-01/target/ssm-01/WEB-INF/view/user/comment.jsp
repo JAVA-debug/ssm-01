@@ -69,7 +69,7 @@
 								<table class="good" style="height:50px">
 									<tbody>
 									<tr>
-										<td class="pingjia_pic"><span class="pingjia_type pingjia_type_1"></span></td>
+<%--										<td class="pingjia_pic"><span class="pingjia_type pingjia_type_1"></span></td>--%>
 										<td class="pingjia_title"><span><a href="">${comment.content}</a></span><br />${comment.createTime}</td>
 										<td class="pingjia_danjia"><strong>${comment.account.username}</strong></td>
 										<td class="pingjia_shuliang"><a href="">${comment.product.name}</a><br />${comment.product.price}元</td>
@@ -91,22 +91,9 @@
 	<!-- 我的个人中心 End -->
 
 	<!-- Footer - wll - 2013/3/24 -->
-	<div class="clear"></div>
-	<div class="shop_footer">
-            <div class="shop_footer_link">
-                <p>
-                    <a href="">首页</a>|
-                    <a href="">招聘英才</a>|
-                    <a href="">广告合作</a>|
-                    <a href="">关于ShopCZ</a>|
-                    <a href="">关于我们</a>
-                </p>
-            </div>
-            <div class="shop_footer_copy">
-                <p>Copyright 2004-2013 itcast Inc.,All rights reserved.</p>
-            </div>
-        </div>
-	<!-- Footer End -->
+		<c:import url="module/footer.jsp"></c:import>
+
+		<!-- Footer End -->
 </body>
 <script>
 	$(document).ready(function(){

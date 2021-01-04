@@ -28,6 +28,12 @@ public class ProductController {
         return productService.limit2();
     }
 
+    @RequestMapping("/indexCate")
+    @ResponseBody
+    public List<Product> indexCate(Integer productCategoryId){
+        return productService.indexCate(productCategoryId);
+    }
+
 //    @RequestMapping("/search")
 //    @ResponseBody
 //    public List<Product> searchProduct(String searchText){

@@ -31,6 +31,9 @@ public class GoodDetailController {
     public String detail(@RequestParam("bookid") Integer id, Model model){
         Product good = productService.good(id);
         model.addAttribute("goodInfo",good);
+
+        List<Product> limit = productService.limit(3, 4);
+        model.addAttribute("tuijian",limit);
         return "user/goods";
     }
 

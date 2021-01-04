@@ -54,5 +54,14 @@ public class ProductControllerAdmin {
         return "redirect:/admin/product/proAll";
     }
 
+    @RequestMapping("/changeStatus")
+    public String changeProStatus(Integer id){
+        Integer integer = productService.changeProStatus(id);
+        if (integer == -1){
+            return null;
+        }
+        return "redirect:/admin/product/proAll";
+    }
+
 
 }
