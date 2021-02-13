@@ -23,7 +23,44 @@
 <%--            <input type="button" value="查询"/>--%>
 <%--            <a href="providerAdd.html">添加供应商</a>--%>
 <%--        </div>--%>
-        <!--供应商操作表格-->
+        <form action="/admin/product/selPro" method="post">
+            <div class="search">
+                <span>商品名称：</span>
+                <input type="text" placeholder="请输入商品的名称" name="name" value="${product.name}"/>
+
+                <select name="status" >
+                    <c:if test="${product.status == 1}">
+                        <option value="">全部</option>
+                        <option value="1" selected>上架</option>
+                        <option value="0">下架</option>
+                    </c:if>
+
+                    <c:if test="${product.status == 0}">
+                        <option value="" >全部</option>
+                        <option value="1" >上架</option>
+                        <option value="0" selected>下架</option>
+                    </c:if>
+                    <c:if test="${product.status == null}">
+                        <option value="" selected>全部</option>
+                        <option value="1" >上架</option>
+                        <option value="0" >下架</option>
+                    </c:if>
+
+                </select>
+
+
+                <span>是否付款：</span>
+                <select name="fukuan">
+                    <option value="">--请选择--</option>
+                    <option value="">已付款</option>
+                    <option value="">未付款</option>
+                </select>
+
+                <input type="submit" value="查询"/>
+                <a href="billAdd.html">添加订单</a>
+            </div>
+        </form>
+
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
                 <th width="10%">商品编号</th>
@@ -35,28 +72,55 @@
                 <th width="10%">商品评论数</th>
                 <th width="20%">操作</th>
             </tr>
-            <c:forEach items="${proAll}" var="pro">
-                <tr>
-                    <td>${pro.id}</td>
-                    <td>${pro.name}</td>
-                    <td><img src="${pro.imageUrl}" style="width: 100px;height: 100px"></td>
-                    <td>${pro.price}</td>
-                    <td>${pro.stock}</td>
-                    <td>${pro.sellNum}</td>
-                    <td>${pro.commentNum}</td>
-                    <td>
-                        <c:if test="${pro.status == 0}">
-                            <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">上架</a></button>
-                        </c:if>
-                        <c:if test="${pro.status == 1}">
-                            <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">下架</a></button>
-                        </c:if>
-                        <a href="${ctx}/admin/product/proInfo?id=${pro.id}"><img src="/res/admin/img/read.png" alt="查看" title="查看"/></a>
-                        <a href="${ctx}/admin/product/toUpdate?id=${pro.id}"><img src="/res/admin/img/xiugai.png" alt="修改" title="修改"/></a>
-                        <a href="${ctx}/admin/product/proDel?id=${pro.id}" class="removeProvider"><img src="/res/admin/img/schu.png" alt="删除" title="删除"/></a>
-                    </td>
-                </tr>
-            </c:forEach>
+            <c:if test="${!empty proAll}">
+                <c:forEach items="${proAll}" var="pro">
+                    <tr>
+                        <td>${pro.id}</td>
+                        <td>${pro.name}</td>
+                        <td><img src="${pro.imageUrl}" style="width: 100px;height: 100px"></td>
+                        <td>${pro.price}</td>
+                        <td>${pro.stock}</td>
+                        <td>${pro.sellNum}</td>
+                        <td>${pro.commentNum}</td>
+                        <td>
+                            <c:if test="${pro.status == 0}">
+                                <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">上架</a></button>
+                            </c:if>
+                            <c:if test="${pro.status == 1}">
+                                <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">下架</a></button>
+                            </c:if>
+                            <a href="${ctx}/admin/product/proInfo?id=${pro.id}"><img src="/res/admin/img/read.png" alt="查看" title="查看"/></a>
+                            <a href="${ctx}/admin/product/toUpdate?id=${pro.id}"><img src="/res/admin/img/xiugai.png" alt="修改" title="修改"/></a>
+                            <a href="${ctx}/admin/product/proDel?id=${pro.id}" class="removeProvider"><img src="/res/admin/img/schu.png" alt="删除" title="删除"/></a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </c:if>
+
+            <c:if test="${!empty selPro}">
+                <c:forEach items="${selPro}" var="pro">
+                    <tr>
+                        <td>${pro.id}</td>
+                        <td>${pro.name}</td>
+                        <td><img src="${pro.imageUrl}" style="width: 100px;height: 100px"></td>
+                        <td>${pro.price}</td>
+                        <td>${pro.stock}</td>
+                        <td>${pro.sellNum}</td>
+                        <td>${pro.commentNum}</td>
+                        <td>
+                            <c:if test="${pro.status == 0}">
+                                <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">上架</a></button>
+                            </c:if>
+                            <c:if test="${pro.status == 1}">
+                                <button><a href="${ctx}/admin/product/changeStatus?id=${pro.id}">下架</a></button>
+                            </c:if>
+                            <a href="${ctx}/admin/product/proInfo?id=${pro.id}"><img src="/res/admin/img/read.png" alt="查看" title="查看"/></a>
+                            <a href="${ctx}/admin/product/toUpdate?id=${pro.id}"><img src="/res/admin/img/xiugai.png" alt="修改" title="修改"/></a>
+                            <a href="${ctx}/admin/product/proDel?id=${pro.id}" class="removeProvider"><img src="/res/admin/img/schu.png" alt="删除" title="删除"/></a>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </c:if>
 
         </table>
 

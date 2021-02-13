@@ -57,4 +57,14 @@
     <update id="proDown">
         update product set status = 0 where id = #{id}
     </update>
+
+    <select id="selPro" parameterType="product" resultType="product">
+        select * from product where 1=1
+        <if test="pro.name!=null">
+            and name like concat('%',#{pro.name},'%')
+        </if>
+        <if test="pro.status!=null">
+            and status = #{pro.status}
+        </if>
+    </select>
 </mapper>

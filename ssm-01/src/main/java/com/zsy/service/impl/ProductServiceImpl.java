@@ -79,5 +79,10 @@ public class ProductServiceImpl implements IProductService {
         return productDao.proUp(id);
     }
 
+    @Override
+    public List<Product> selPro(Product product) {
+        return productDao.selPro(product);
+    }
+
 
 }

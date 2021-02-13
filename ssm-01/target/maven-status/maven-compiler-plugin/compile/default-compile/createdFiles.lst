@@ -30,6 +30,7 @@ com\zsy\controller\Hellow.class
 com\zsy\domain\Product.class
 com\zsy\domain\Orders.class
 com\zsy\domain\Comment.class
+com\zsy\utils\AlipayConfig.class
 com\zsy\service\impl\AccountServiceImpl.class
 com\zsy\dao\UserDao.class
 com\zsy\dao\FavoriteDao.class
@@ -48,6 +49,7 @@ com\zsy\controller\GoodDetailController.class
 com\zsy\service\ICartService.class
 com\zsy\controller\admin\OrderControllerAdmin.class
 com\zsy\service\impl\ProductServiceImpl.class
+com\zsy\utils\getJSONString.class
 com\zsy\controller\CartController.class
 com\zsy\domain\OrderItem.class
 com\zsy\controller\ProductController.class

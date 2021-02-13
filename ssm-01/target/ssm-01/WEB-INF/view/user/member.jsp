@@ -82,6 +82,9 @@
                                             <c:if test="${orders.status == 2}">
                                                 <span class="digndan_caozuo">已完成</span>
                                             </c:if>
+                                            <c:if test="${orders.status == 3}">
+                                                <span class="digndan_caozuo">未支付订单,<a href="/showPay?orderId=${orders.id}">去支付</a></span>
+                                            </c:if>
                                     </tr>
                                     </thead>
                                     <tbody>

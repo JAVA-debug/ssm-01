@@ -14,7 +14,7 @@
 <section class="publicMian">
     <c:import url="module/leftMenu.jsp"></c:import>
     <div class="right">
-        <img class="wColck" src="img/clock.jpg" alt=""/>
+        <img class="wColck" src="/res/admin/img/touxiang.jpg" alt=""/>
         <div class="wFont">
             <h2>Admin</h2>
             <p>管理系统!</p>

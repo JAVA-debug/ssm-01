@@ -19,7 +19,7 @@
         </association>
     </resultMap>
     <select id="findAll" resultType="Orders">
-        select * from orders where userId = #{userId}
+        select * from orders where userId = #{userId} ORDER BY createTime DESC
     </select>
 
     <select id="findAllItem" resultType="OrderItem">
@@ -64,4 +64,31 @@
     <delete id="delOrderItem">
         DELETE from order_item WHERE orderId = #{orderId}
     </delete>
+    
+    <select id="oneOrder" resultType="Orders">
+        select * from orders where id = #{orderId};
+    </select>
+
+    <update id="orderStatus">
+        update orders set status = #{num} where sn = #{sn}
+    </update>
+
+    <select id="item" resultType="OrderItem">
+        select * from order_item WHERE orderId = (
+            SELECT id from orders WHERE sn = #{sn}
+        )
+    </select>
+
+    <select id="selIOrder" resultType="Orders" parameterType="Orders">
+        select * from orders where 1=1
+        <if test="orders.sn != '' ">
+            and sn = #{orders.sn}
+        </if>
+        <if test="orders.userId != null">
+            and userId = #{orders.userId}
+        </if>
+        <if test="orders.status != null">
+            and status = #{orders.status}
+        </if>
+    </select>
 </mapper>

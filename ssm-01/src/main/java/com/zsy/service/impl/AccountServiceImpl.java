@@ -20,6 +20,11 @@ public class AccountServiceImpl implements IAccountService {
     }
 
     @Override
+    public Account findByName(String name) {
+        return accountDao.findByName(name);
+    }
+
+    @Override
     public Account doLogin(String username, String password) {
         Account account = accountDao.findByName(username);
         if (account == null || !account.getPassword().equals(password)){

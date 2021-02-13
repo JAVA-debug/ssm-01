@@ -47,4 +47,6 @@ public class ProductController {
         return "user/list";
     }
 
+
+
 }

@@ -2,6 +2,7 @@ package com.zsy.dao;
 
 import com.zsy.domain.OrderItem;
 import com.zsy.domain.Orders;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -10,6 +11,15 @@ public interface OrdersDao {
 //    找到用户下所有订单
 //    @Select("select * from orders where userId = #{userId}")
     List<Orders> findAll(Integer userId);
+
+    //找订单
+    Orders oneOrder(Integer orderId);
+
+    //根据单号找订单项
+    List<OrderItem> item(String sn);
+
+    //设置订单状态
+    void orderStatus(@Param("num") Integer num,@Param("sn") String sn);
 
 //    找到每个订单的所有商品
     List<OrderItem> findAllItem(Integer userId);
@@ -40,4 +50,7 @@ public interface OrdersDao {
 
 //    要先删除order_item的数据之后才能删除order
     Integer delOrderItem(Integer orderId);
+
+    //管理员找订单
+    List<Orders> selIOrder(@Param("orders") Orders orders);
 }

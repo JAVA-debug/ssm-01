@@ -11,6 +11,8 @@ public interface IAccountService {
 
     List<Account> allAccount();
 
+    Account findByName(String name);
+
     Account doLogin(String username,String password);
 
     Integer doReg(Account account);

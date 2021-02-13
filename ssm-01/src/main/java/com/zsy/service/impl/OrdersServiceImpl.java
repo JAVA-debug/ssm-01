@@ -20,6 +20,22 @@ public class OrdersServiceImpl implements IOrdersService {
     }
 
     @Override
+    public Orders oneOrder(Integer orderId) {
+        return ordersDao.oneOrder(orderId);
+    }
+
+    @Override
+    public void orderStatus(Integer num,String sn) {
+        ordersDao.orderStatus(num,sn);
+    }
+
+    @Override
+    public List<OrderItem> item(String sn) {
+        return ordersDao.item(sn);
+    }
+
+
+    @Override
     public List<OrderItem> findAllItem(Integer userId) {
         return ordersDao.findAllItem(userId);
     }
@@ -69,5 +85,10 @@ public class OrdersServiceImpl implements IOrdersService {
             return -1;
         }
         return ordersDao.delOrder(orderId);
+    }
+
+    @Override
+    public List<Orders> selIOrder(Orders orders) {
+        return ordersDao.selIOrder(orders);
     }
 }

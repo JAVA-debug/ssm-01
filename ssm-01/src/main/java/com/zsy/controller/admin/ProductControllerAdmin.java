@@ -22,6 +22,13 @@ public class ProductControllerAdmin {
         return "admin/ProductList";
     }
 
+    @RequestMapping("/selPro")
+    public String selPro(Product product,Model model){
+        List<Product> products = productService.selPro(product);
+        model.addAttribute("selPro",products);
+        return "admin/ProductList";
+    }
+
     @RequestMapping("/proInfo")
     public String proInfo(Integer id,Model model){
         Product good = productService.good(id);

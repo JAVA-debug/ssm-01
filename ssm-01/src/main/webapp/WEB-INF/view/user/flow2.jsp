@@ -276,7 +276,6 @@
     $(document).ready(function () {
         $("#submit-order-btn").click(function () {
             var addressId = $('input:radio:checked').val();
-            console.log(addressId)
             if (addressId == '' || addressId == 'undefined' || addressId == null) {
                 alert('请选择收货地址');
                 return;
@@ -289,10 +288,10 @@
                 success: function (data) {
                     if (data.code == 8) {
                         alert("下单成功");
-                        // alert(window.location.href)
                         console.log(data.msg)
                         <%--window.location.href = ${pageContext.request.contextPath}+"/success?orderId"+data.msg;--%>
-                        window.location.href = "http://localhost:8080/success?orderId="+data.msg
+                        window.location.href = "http://localhost:8080/showPay?orderId="+data.msg
+                        // window.location.href = "http://zsy123456.free.idcfengye.com/showPay?orderId="+data.msg
                     } else {
                         alert(data.msg);
                     }

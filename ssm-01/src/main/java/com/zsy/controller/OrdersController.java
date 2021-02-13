@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+import static com.zsy.utils.getJSONString.getJSONString;
+
 @Controller
 public class OrdersController {
     @Autowired
@@ -25,7 +27,13 @@ public class OrdersController {
 
     @Autowired
     private IFavoriteService favoriteService;
+/*
+    0：待发货(已支付
+    1：已发货
+    2：已完成
+    3:未支付
 
+ */
 
 
     @RequestMapping("/order")
@@ -63,12 +71,14 @@ public class OrdersController {
         return getJSONString(2,"error");
     }
 
-    public static String getJSONString(int code, String msg) {
-        JSONObject json = new JSONObject();
-        json.put("code", code);
-        json.put("msg", msg);
-        return json.toJSONString();
-    }
+
+
+//    public static String getJSONString(int code, String msg) {
+//        JSONObject json = new JSONObject();
+//        json.put("code", code);
+//        json.put("msg", msg);
+//        return json.toJSONString();
+//    }
 
 
 }

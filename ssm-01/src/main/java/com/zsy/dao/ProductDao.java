@@ -42,5 +42,6 @@ public interface ProductDao {
     Integer proUp(Integer id);
     Integer proDown(Integer id);
 
-
+    //管理员查找商品
+    List<Product> selPro(@Param("pro") Product product);
 }

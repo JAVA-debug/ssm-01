@@ -8,6 +8,12 @@ import java.util.List;
 public interface IOrdersService {
     List<Orders> findAll(Integer userId);
 
+    Orders oneOrder(Integer orderId);
+
+    void orderStatus(Integer num,String sn);
+
+    List<OrderItem> item(String sn);
+
     List<OrderItem> findAllItem(Integer userId);
 
     Integer findOne(Integer orderId);
@@ -23,5 +29,7 @@ public interface IOrdersService {
     Integer sendOrder(Integer orderId);
 
     Integer delOrder(Integer orderId);
+
+    List<Orders> selIOrder(Orders orders);
 
 }

@@ -29,4 +29,6 @@ public interface AccountDao {
 //    管理员删除用户
     Integer delAcc(Integer id);
 
+
+
 }

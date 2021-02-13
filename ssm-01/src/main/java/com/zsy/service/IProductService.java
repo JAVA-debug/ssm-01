@@ -29,5 +29,7 @@ public interface IProductService {
 
     Integer changeProStatus(Integer id);
 
+    List<Product> selPro(Product product);
+
 
 }
