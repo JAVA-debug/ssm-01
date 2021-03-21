@@ -39,4 +39,11 @@ public class AdminController {
             return "redirect:/admin/";
         }
     }
+
+    @RequestMapping("/loginOut")
+    public String loginOut(HttpServletRequest request){
+        HttpSession session = request.getSession();
+        session.removeAttribute("user");
+        return "admin/login";
+    }
 }

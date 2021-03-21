@@ -26,5 +26,5 @@ public interface IAccountService {
 
     Integer accUpdate(Account account);
 
-    Integer delAcc(Integer id);
+    List<Account> accSearch(String username);
 }

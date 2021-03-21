@@ -1,5 +1,7 @@
 package com.zsy.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Favorite {
@@ -9,6 +11,7 @@ public class Favorite {
     private String name;
     private String imageUrl;
     private Float price;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     public Integer getId() {

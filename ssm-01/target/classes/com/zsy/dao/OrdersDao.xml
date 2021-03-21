@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zsy.dao.OrdersDao">
+    <resultMap id="orderAllMap" type="orders">
+        <id column="o_id" property="id"/>
+        <result column="o_sn" property="sn"/>
+        <result column="o_userId" property="userId"/>
+        <result column="o_address" property="address"/>
+        <result column="o_money" property="money"/>
+        <result column="o_productNum" property="productNum"/>
+        <result column="o_status" property="status"/>
+        <result column="o_createTime" property="createTime"/>
+        <association property="account" javaType="account">
+            <id column="a_id" property="id"></id>
+            <id column="a_username" property="username"></id>
+        </association>
+    </resultMap>
+    <select id="findAll" resultType="Orders">
+        select * from orders where userId = #{userId} ORDER BY createTime DESC
+    </select>
+
+    <select id="findAllItem" resultType="OrderItem">
+        select * from order_item where orderId in (select id from orders where userId = #{userId})
+    </select>
+
+    <select id="findOne" resultType="Integer">
+        SELECT COUNT(productId) from order_item WHERE orderId = #{orderId}
+    </select>
+    
+    <insert id="addOrder" useGeneratedKeys="true" keyProperty="id">
+        insert into orders (sn,userId,address,money,productNum,status,createTime) values (#{sn},#{userId},#{address},#{money},#{productNum},#{status},NOW());
+    </insert>
+
+    <insert id="addItem" useGeneratedKeys="true" keyProperty="id">
+        insert into order_item (productId,orderId,name,imageUrl,price,num,money) values (#{productId},#{orderId},#{name},#{imageUrl},#{price},#{num},#{money});
+    </insert>
+    
+    <select id="findById" resultType="OrderItem">
+        select * from order_item where orderId = #{orderId};
+    </select>
+
+    <update id="finishOrder">
+        update orders set status = 2 where id = #{orderId}
+    </update>
+    
+    <update id="sendOrder">
+        update orders set status = 1 where id = #{orderId}
+    </update>
+
+    <select id="orderAll" resultMap="orderAllMap">
+         select
+         o.id as o_id,o.sn as o_sn,o.userId as o_userId,o.address as o_address,o.money as o_money,o.productNum as o_productNum,o.status as o_status,o.createTime as o_createTime,
+         a.id as a_id,a.username as a_username
+         from account a ,orders o where a.id = o.userId
+    </select>
+
+    <delete id="delOrder">
+        delete from orders where id = ${orderId}
+    </delete>
+
+    <delete id="delOrderItem">
+        DELETE from order_item WHERE orderId = #{orderId}
+    </delete>
+    
+    <select id="oneOrder" resultType="Orders">
+        select * from orders where id = #{orderId};
+    </select>
+
+    <update id="orderStatus">
+        update orders set status = #{num} where sn = #{sn}
+    </update>
+
+    <select id="item" resultType="OrderItem">
+        select * from order_item WHERE orderId = (
+            SELECT id from orders WHERE sn = #{sn}
+        )
+    </select>
+
+    <select id="selIOrder" resultType="Orders" parameterType="Orders">
+        select * from orders where 1=1
+        <if test="orders.sn != '' ">
+            and sn = #{orders.sn}
+        </if>
+        <if test="orders.userId != null">
+            and userId = #{orders.userId}
+        </if>
+        <if test="orders.status != null">
+            and status = #{orders.status}
+        </if>
+    </select>
+</mapper>

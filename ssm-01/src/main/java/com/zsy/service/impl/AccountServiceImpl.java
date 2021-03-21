@@ -72,8 +72,8 @@ public class AccountServiceImpl implements IAccountService {
     }
 
     @Override
-    public Integer delAcc(Integer id) {
-        return accountDao.delAcc(id);
+    public List<Account> accSearch(String username) {
+        return accountDao.accSearch(username);
     }
 
 

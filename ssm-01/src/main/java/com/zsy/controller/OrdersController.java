@@ -47,8 +47,6 @@ public class OrdersController {
 
         model.addAttribute("order",orders);
 
-
-
         return "user/member";
     }
 

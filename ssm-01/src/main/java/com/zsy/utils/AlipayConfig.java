@@ -18,9 +18,11 @@ public class AlipayConfig {
     public static String alipay_public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr1b4IoGbmPCflj9bJ6I1n/qPv3sI4Ud+3QiLKXx99VR6ynKgrU09l2qaR8wBii74TOhYReNzMCX/8h+WLo0ygzNLcBqVrgu/W/+g22HNeZoCz4llqb6WHzDzZOhA1tLlydRXsKpYNEApvW78IL24D0GOtUTNmh0M1sYXzNHNQHGvNEMBJK5OL6BGrPzJ0wwU1bO2knwn7tqLEmtlJsiV+iLwNP6Bq2uRBHtJINCUb3tUFZ8CcRCsShAMWAP5gzrMq6Y+jCEgb2KF0DZdzzKiPSXvbDZ/Gw7ZZEJQ82UqPLik2Dw7ib04YW9ih+wc1XR88OZMa6bE27t/c9M6/zfjKwIDAQAB";
 
     // 服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
+//    public static String notify_url = "http://39.107.229.15:8080/notify";
     public static String notify_url = "http://localhost:8080/notify";
 
     // 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
+//    public static String return_url = "http://39.107.229.15:8080/return";
     public static String return_url = "http://localhost:8080/return";
 
     // 签名方式

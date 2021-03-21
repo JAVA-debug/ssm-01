@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/admin/account")
@@ -50,13 +51,11 @@ public class UserControllerAdmin {
         }
         return "redirect:/admin/account/allAcc";
     }
-
-    @RequestMapping("/delAcc")
-    public String delAcc(Integer id){
-        Integer integer = accountService.delAcc(id);
-        if (integer == -1){
-            return null;
-        }
-        return "redirect:/admin/account/allAcc";
+    
+    @RequestMapping("/accSearch")
+    public String accSearch(String name,Model model){
+        List<Account> accounts = accountService.accSearch(name);
+        model.addAttribute("searchRes",accounts);
+        return "admin/AccountList";
     }
 }

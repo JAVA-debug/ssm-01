@@ -1,5 +1,7 @@
 package com.zsy.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -13,6 +15,8 @@ public class Orders {
     private Integer productNum;
     private Integer status;
     private String remark;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     private List<OrderItem> orderItems = new ArrayList<OrderItem>();
